@@ -1,0 +1,207 @@
+:root {
+  color-scheme: light;
+  --cream: #f8f3e9;
+  --oat: #e5cead;
+  --caramel: #bb8c65;
+  --wood: #76513d;
+  --sage: #a0a388;
+  --ink: #442e25;
+  --muted: #684f43;
+  --line: #ddc8ac;
+  --paper: #fff9ec;
+  --serif: "Songti TC", "Noto Serif CJK TC", "PMingLiU", Georgia, serif;
+  --sans: -apple-system, BlinkMacSystemFont, "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { scrollbar-gutter: stable; }
+body { margin: 0; background: var(--cream); color: var(--ink); font: 16px/1.6 var(--sans); }
+a { color: #664433; text-underline-offset: .2em; }
+button { font: inherit; }
+a, button, summary { touch-action: manipulation; }
+:focus-visible { outline: 2px solid var(--wood); outline-offset: 4px; }
+button:disabled { cursor: default; }
+h1, h2, h3, p, figure { margin: 0; }
+
+.book-header, .book { max-width: 1184px; width: calc(100% - 48px); margin-inline: auto; }
+.book-header {
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.brand { display: inline-flex; align-items: center; gap: .65rem; font-family: var(--serif); font-weight: 800; text-decoration: none; }
+.book-mark { width: 25px; height: 19px; border: 1px solid var(--wood); background: var(--oat); border-radius: 45% 45% 24% 24%; position: relative; }
+.book-mark::before { content: ""; position: absolute; inset: 4px 5px 4px 7px; background: repeating-linear-gradient(70deg, transparent 0 3px, var(--wood) 4px 5px); border-radius: 40%; opacity: .72; }
+.wiki-link { font-size: .875rem; font-weight: 700; white-space: nowrap; }
+.book { padding-bottom: 1.4rem; }
+.chapters { display: grid; grid-template-columns: repeat(4, 1fr); gap: .6rem; margin: 0 0 .75rem; }
+.chapters a {
+  text-decoration: none;
+  min-width: 0;
+  min-height: 38px;
+  display: grid;
+  align-content: center;
+  padding: .28rem .65rem;
+  border-bottom: 3px solid #decbb3;
+  font-size: .875rem;
+  line-height: 1.4;
+}
+.chapters a[data-complete] { border-color: var(--sage); }
+.chapters a[aria-current] { border-color: var(--wood); background: #efe2cd; font-weight: 750; }
+.chapters a:hover { background: #efe2cd; }
+
+.deck { container-type: inline-size; }
+.slide {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: grid;
+  grid-template-columns: minmax(0, 1.13fr) minmax(0, .87fr);
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  column-gap: clamp(16px, 2.8cqi, 34px);
+  padding: clamp(20px, 3.7cqi, 46px);
+  border: 1px solid #d6bb98;
+  border-radius: 20px;
+  background:
+    radial-gradient(ellipse at 93% 12%, #e5cead58, transparent 53%),
+    radial-gradient(ellipse at 0% 85%, #f2e0be5c, transparent 64%),
+    repeating-linear-gradient(112deg, #87624a05 0 1px, transparent 1px 4px),
+    var(--paper);
+  box-shadow: 0 9px 30px #76513d15, inset 0 0 0 5px #fffdf44f;
+  position: relative;
+}
+.deck:not([data-ready]) .slide + .slide { margin-top: 1rem; }
+.slide:focus { outline: none; }
+.slide-display { display: contents; }
+.slide-heading { grid-column: 1; grid-row: 1; padding-bottom: clamp(10px, 1.5cqi, 18px); border-bottom: 1px solid var(--line); }
+.slide-heading h2, .slide-heading h1 {
+  color: var(--wood);
+  font: 800 clamp(27px, 4.45cqi, 57px)/1.16 var(--serif);
+  letter-spacing: -.035em;
+  text-wrap: balance;
+}
+.slide-heading h1 { font-size: clamp(38px, 6.0cqi, 76px); }
+.slide-heading p { color: var(--muted); margin-top: .55em; font-size: clamp(14px, 1.75cqi, 21px); font-weight: 680; line-height: 1.4; }
+.artwork {
+  grid-row: 1 / 4;
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  align-self: stretch;
+  position: relative;
+}
+.artwork img { width: 100%; height: auto; display: block; object-fit: contain; }
+.artwork figcaption { text-align: center; color: var(--muted); font-size: .8rem; margin-top: -.9em; }
+.lesson { grid-row: 2; grid-column: 1; align-self: center; padding-top: clamp(11px, 1.9cqi, 22px); min-width: 0; }
+.lesson-points { display: grid; gap: clamp(8px, 1.24cqi, 16px); min-width: 0; }
+.lesson-point { padding-left: clamp(9px, 1.3cqi, 15px); border-left: 3px solid var(--caramel); }
+.lesson-point:nth-child(2n) { border-color: var(--sage); }
+.lesson-point h3, .quiz summary {
+  color: var(--wood);
+  font-size: clamp(14px, 1.7cqi, 20px);
+  font-weight: 800;
+  line-height: 1.3;
+}
+.lesson-point p, .quiz p { margin-top: .25em; font-size: clamp(14px, 1.55cqi, 18px); line-height: 1.54; }
+.cover .artwork img { width: 115%; max-width: none; margin-left: -8%; }
+.citations {
+  grid-column: 1;
+  grid-row: 3;
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: .2rem .7rem;
+  margin-top: clamp(10px, 1.6cqi, 18px);
+  font-size: clamp(12px, 1.14cqi, 14px);
+  color: var(--muted);
+}
+.citations span { white-space: normal; }
+.citations a { font-weight: 700; white-space: nowrap; }
+.source-label { color: var(--muted); font-weight: 650; }
+.process .lesson-points { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.process .lesson-point h3 { font-size: clamp(13px, 1.5cqi, 18px); }
+.process .lesson-point p { font-size: clamp(13px, 1.35cqi, 16px); }
+.text-link { display: inline-block; margin-top: .75em; font-size: .875rem; font-weight: 760; }
+.quiz { border: 1px solid #d5be9c; border-radius: .5rem; background: #f2e4cd; padding: .45rem .6rem; }
+.quiz summary { cursor: pointer; }
+.review-links { display: flex; gap: .9rem; }
+
+.pager {
+  margin-top: .85rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  gap: .65rem;
+}
+.pager button, dialog button {
+  border: 1px solid var(--wood);
+  border-radius: 999px;
+  padding: .5em 1.1em;
+  min-height: 44px;
+  background: var(--wood);
+  color: #fff7e9;
+  font-weight: 730;
+  cursor: pointer;
+}
+.pager button:hover:enabled, dialog button:hover { background: #5f3d2c; }
+.pager button:disabled { background: #eee3d4; color: #775f52; border-color: #d3bba0; }
+#previous { justify-self: start; }
+#next { justify-self: end; }
+.page-status { display: grid; justify-items: center; gap: .22rem; }
+#page-number { font: 700 1rem/1.4 var(--serif); font-variant-numeric: tabular-nums; }
+#reading-progress { width: clamp(72px, 15vw, 165px); height: 7px; accent-color: var(--wood); }
+dialog {
+  width: min(600px, calc(100% - 30px));
+  max-height: 85vh;
+  overflow: auto;
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--wood);
+  border-radius: 15px;
+  padding: 1.2rem 1.4rem;
+}
+dialog::backdrop { background: #442e2555; }
+dialog form { float: right; }
+dialog h2 { font-family: var(--serif); margin: .35rem 4.5rem .5rem 0; }
+dialog ul { padding-left: 1.2rem; }
+dialog li { margin-bottom: .6rem; overflow-wrap: anywhere; }
+dialog li a { font-weight: 750; }
+dialog li p { font-size: .95rem; }
+
+@media (max-width: 860px) {
+  .book-header, .book { width: calc(100% - 26px); }
+  .book-header { min-height: 56px; }
+  .chapters { gap: .3rem; }
+  .chapters a { min-height: 40px; padding-inline: .3rem; font-size: clamp(.75rem, 3.2vw, .875rem); text-align: center; }
+  .slide { display: block; aspect-ratio: auto; padding: 0; border-radius: 14px; }
+  .slide-display {
+    aspect-ratio: 16 / 9;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, .95fr);
+    align-items: center;
+    gap: 0;
+    padding: .55rem .6rem .55rem 1rem;
+    border-bottom: 1px solid var(--line);
+  }
+  .slide-heading { grid-column: 1; grid-row: 1; padding: 0; border: 0; }
+  .slide-heading h2, .slide-heading h1 { font-size: clamp(19px, 5.5cqi, 42px); text-wrap: initial; }
+  .slide-heading h1 { font-size: clamp(24px, 6.5cqi, 50px); }
+  .slide-heading p { font-size: clamp(12px, 2.8cqi, 17px); }
+  .artwork { grid-column: 2; grid-row: 1; align-self: center; }
+  .artwork figcaption { font-size: .72rem; }
+  .cover .artwork img { width: 100%; margin: 0; }
+  .lesson-points { gap: .9rem; }
+  .lesson { padding: .9rem 1rem; }
+  .lesson-point h3, .quiz summary, .process .lesson-point h3 { font-size: 1rem; }
+  .lesson-point p, .quiz p, .process .lesson-point p { font-size: .95rem; }
+  .citations { padding: .65rem 1rem .8rem; border-top: 1px solid var(--line); margin: 0; font-size: .8125rem; }
+  .pager button { font-size: .875rem; padding-inline: .75em; }
+}
+@media (max-width: 365px) {
+  .slide-display { padding-left: .65rem; }
+  .lesson, .citations { padding-inline: .7rem; }
+}

@@ -1,0 +1,88 @@
+酸種麵包科學 Wiki｜HTML 教學簡報實際驗收
+2026-11-22（臺灣時間）
+
+交付
+docs/slides/index.html、slides.css、slides.js 及 assets/lesson-01.svg 至 lesson-12.svg。
+12 頁、31 個教學項目與 34 筆可追溯來源對應；核准 Wiki 的 W001–W008、SRC-001–SRC-007 全數涵蓋。
+圖片以自行繪製的本機 SVG 生成，使用原創路徑、淡色漸層及筆觸濾鏡。無引用外部圖檔或字體檔。
+
+實際 Graph
+讀取核准 Wiki 與 Ingest／審查／網站驗收紀錄 → 擷取帶來源標記的正文及限定條件 → 排成指定 12 頁大綱 → 核對 Wiki/SRC 配對 → 建立教學文案 → 自繪插畫 → 渲染 HTML、CSS、JS → Chrome 功能與版面檢查 → 獨立 AI 教學與安全審查複查 → 輸出。
+內容與圖像審查亦在各自草稿完成時開始，以便在瀏覽器驗收前修正。詳見 wiki/review/slides-review.md。
+
+實際退回及修正
+- 投影片內容改寫，第 1 輪：第 2 頁把主詞限定為酸種麵包。第 5 頁把室溫處理改回 W003 的約 1–2 小時，保留漲到約兩倍與回落條件。第 8 頁釐清酵頭是另餵後加入主麵糰的部分。第 11 頁保留臨床證據不確定性與含麩質條件。第 4 頁同輪補早期觀察。上述項目經獨立複查通過。
+- 圖像設計，第 1 輪：第 3 頁以圖說區分二氧化碳與有機酸。第 4 頁先後兩罐都有可區分的菌群示意。獨立複查通過。
+- CSS 排版：首次截圖看到封面右側空間足夠，左側短句仍被段落寬度限制提早換行。放寬封面段落後複看。無實測溢出或遮擋。本項為 1 次排版微調。
+- 瀏覽器驗證工具：重用前階段腳本時，一個 Python 多行替換字串的語法錯誤和下游 node --check 的不完整腳本錯誤，在啟動 Chrome 前同輪修正。
+- Chrome 初跑在參考來源對話框的 Escape 測試得到 open=true，退出 1。排版及翻頁檢查此前已通過。回到測試輸入，補送 Escape 的虛擬鍵碼後，對話框以原生鍵盤行為關閉，簡報 JS 實作維持原狀。
+- 第二次實跑全部檢查有 PASS 輸出，但測試伺服器連線仍未釋放，該執行以 Ctrl+C 收尾，退出 130。修正工具收尾，關閉 Chrome 管道與本機 HTTP 連線，第三次整體退出 0。
+- 公開 Wiki 網址回查：網頁工具無法存取，curl -I -L --max-time 10 回 DNS 解析錯誤（退出 6）。GitHub Pages 專案子路徑及返回 Wiki 改以本機 /sourdough-science-wiki/slides/ 實測，沒有對遠端做部署驗收。
+
+後續可提前的檢查
+內容改寫是退回最多的節點（4 頁），其次是圖像設計（2 頁）。在大綱與取材時即可標出主詞、適用條件、時間與證據限制，並先寫酵頭等名詞的白話定義。在草圖時同步核對圖說、圖形及替代文字。渲染初期先以最窄手機與展開測驗測試，並用完整鍵碼跑一次對話框與方向鍵，可及早辨認工具與版面問題。
+
+最終靜態驗收
+
+$ python3 scripts/lint_wiki.py --strict
+Sourdough Wiki Lint | strict
+Sources: 7 | Approved sources: 7 | Articles: 8 | Approved articles: 8 | Topics: 6/6
+RESULT: PASS (0 errors, 0 warnings)
+exit 0
+
+$ python3 /tmp/sourdough-slides-qa/check.py
+PASS: slide 01 approved mappings W001/SRC-001, W004/SRC-004, W005/SRC-007
+PASS: slide 02 approved mappings W001/SRC-001
+PASS: slide 03 approved mappings W001/SRC-001
+PASS: slide 04 approved mappings W002/SRC-001, W005/SRC-002
+PASS: slide 05 approved mappings W003/SRC-004, W005/SRC-007
+PASS: slide 06 approved mappings W002/SRC-001
+PASS: slide 07 approved mappings W006/SRC-003
+PASS: slide 08 approved mappings W004/SRC-004
+PASS: slide 09 approved mappings W005/SRC-002, W005/SRC-007
+PASS: slide 10 approved mappings W007/SRC-005, W007/SRC-007
+PASS: slide 11 approved mappings W008/SRC-006, W008/SRC-007
+PASS: slide 12 approved mappings W001/SRC-001, W005/SRC-007
+PASS: 31 visible teaching items, 34 reviewed evidence rows, 12 slides, 12 SVG assets with valid local references.
+PASS: all local links, Wiki fragments, quiz/source-map coverage, and excluded safety-text checks.
+exit 0
+
+$ node --check docs/slides/slides.js
+exit 0
+
+$ shasum -a 256 -c /tmp/sourdough-slides-qa/wiki.sha256
+sources.json: OK
+wiki/index.md: OK
+wiki/articles/W001-starter-science.md: OK
+wiki/articles/W002-fermentation-conditions.md: OK
+wiki/articles/W003-feed-established-starter.md: OK
+wiki/articles/W004-first-loaves.md: OK
+wiki/articles/W005-young-starter.md: OK
+wiki/articles/W006-starter-aroma-and-rise.md: OK
+wiki/articles/W007-starter-troubleshooting.md: OK
+wiki/articles/W008-health-evidence.md: OK
+docs/index.html: OK
+docs/wiki.css: OK
+docs/wiki.js: OK
+exit 0
+
+最終 Chrome 真實輸出（本機 HTTP 子路徑及 file://）
+$ node /tmp/sourdough-slides-qa/browser.mjs
+Chrome/158.0.8127.36 at /sourdough-science-wiki/slides/
+PASS: next/previous controls, both arrow keys, boundary behavior, direct URLs, history, page count and chapter progress.
+Rendered heading fonts: [{"familyName":"Songti TC","postScriptName":"STSongti-TC-Bold","isCustomFont":false,"glyphCount":7}]
+Checked 12 slides at 320px including expanded quiz.
+Checked 12 slides at 390px including expanded quiz.
+Checked 12 slides at 768px including expanded quiz.
+Checked 12 slides at 861px including expanded quiz.
+Checked 12 slides at 1024px including expanded quiz.
+Checked 12 slides at 1440px including expanded quiz.
+PASS: knowledge check reveal, 7-source dialog, close button, Escape, quiz expansion, and return to the Wiki under the project subpath.
+PASS: file:// also opens directly at slide 3 with artwork.
+PASS: 72 viewport/slide combinations, 12 watercolor SVGs, loaded system fonts, intact 16:9 canvas, controls clear of content, no failed resources or exceptions.
+exit 0
+
+結論
+通過來源對應、獨立科學與食品安全審查、新手可讀性與教學順序審查。
+通過桌面完整 16:9、手機／平板 16:9 視覺框與下方可讀講解、全部 12 張插畫和系統字型、翻頁與指定頁連結、頁碼／章節進度、測驗與書目對話框、GitHub Pages 子路徑模擬。
+三類人工覆核安全主張仍排除，亦保留血糖及麩質敘述的證據限制。核准 Markdown、來源表與三個 Wiki 網站檔案的雜湊相符。

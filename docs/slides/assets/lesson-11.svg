@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="390" viewBox="0 0 480 390">
+<defs>
+ <filter id="wash" x="-15%" y="-15%" width="130%" height="130%">
+   <feTurbulence type="fractalNoise" baseFrequency=".047" numOctaves="3" seed="9" result="grain"/>
+   <feDisplacementMap in="SourceGraphic" in2="grain" scale="2.8" xChannelSelector="R" yChannelSelector="G"/>
+ </filter>
+ <radialGradient id="crust" cx="41%" cy="30%" r="73%"><stop stop-color="#f2d49a"/><stop offset=".55" stop-color="#c59563"/><stop offset="1" stop-color="#946347"/></radialGradient>
+ <linearGradient id="glass" x2="1" y2="1"><stop stop-color="#e1e4cc" stop-opacity=".8"/><stop offset=".54" stop-color="#fcf4e4" stop-opacity=".55"/><stop offset="1" stop-color="#aeb293" stop-opacity=".8"/></linearGradient>
+ <linearGradient id="batter" x2="0" y2="1"><stop stop-color="#e5bf85"/><stop offset="1" stop-color="#ba8a61"/></linearGradient>
+ <linearGradient id="ceramic" x2="0" y2="1"><stop stop-color="#d2d1af"/><stop offset="1" stop-color="#939b7c"/></linearGradient>
+ <marker id="arrow" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="5" markerHeight="5" orient="auto"><path d="M2 2L9 6 2 10" fill="none" stroke="#85644d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
+</defs><symbol id="slice" viewBox="0 0 160 160">
+ <path d="M29 75Q22 53 44 39Q63 25 98 31Q129 37 136 57Q141 68 131 81L126 128Q119 144 78 144Q33 145 34 130Z" fill="#b17a56" stroke="#845b44" stroke-width="2.5"/>
+ <path d="M37 76Q29 56 48 46Q67 33 99 39Q122 44 127 61Q133 69 122 82L117 127Q110 137 79 136Q49 136 43 126Z" fill="#ecd3a4" stroke="#dcaf79" stroke-width="2.4"/>
+ <path d="M57 63q10-5 13 3t-9 10q-8-1-4-13m34 8q11-7 15 2t-9 8q-8 0-6-10m-23 29q8-8 14-1t-6 9q-10 1-8-8m28 13q13-5 12 4t-13 5q-6-4 1-9M51 116q2-6 7-3t1 9q-8 0-8-6" fill="#b88d65" opacity=".65"/>
+ <path d="M61 53l7 3m38 32-4 5m-47-8l4 4m34-37l5 2m-17 69l3 4" stroke="#fff3d8" stroke-width="2.4" stroke-linecap="round"/>
+</symbol><symbol id="notes" viewBox="0 0 160 160">
+ <path d="M31 36q24-11 49 3q24-14 52-2v96q-30-9-52 4q-26-14-50-4Z" fill="#e3c699" stroke="#a27e5c" stroke-width="2.5"/>
+ <path d="M35 28q21-8 45 6q24-14 45-7v98q-24-7-45 7q-23-14-45-6Z" fill="#f7e9ca" stroke="#af8a66" stroke-width="2"/>
+ <path d="M80 36v92m-36-77q15-4 25 3m-25 13q15-4 25 3m-25 13q15-4 25 3m23-35q12-6 25-4m-25 19q12-6 25-4m-25 19q12-6 25-4" stroke="#b9a078" stroke-width="2" fill="none" stroke-linecap="round"/>
+ <path d="M114 115L47 101l-13-6 14-1 70 13Z" fill="#aaa382" stroke="#8c805f" stroke-width="1.7"/>
+</symbol><symbol id="scale" viewBox="0 0 160 160">
+ <path d="M29 101h103l16 26q4 11-8 14H23q-12-3-8-13Z" fill="url(#ceramic)" stroke="#77836d" stroke-width="2.4"/>
+ <ellipse cx="81" cy="98" rx="60" ry="11" fill="#ded3ae" stroke="#8d8e74" stroke-width="2.2"/>
+ <rect x="55" y="113" width="52" height="17" rx="5" fill="#f3ebce" stroke="#8d8e74" stroke-width="2"/>
+ <path d="M70 121h23" stroke="#9b8c71" stroke-width="3" stroke-linecap="round"/>
+</symbol>
+<g filter="url(#wash)"><ellipse cx="234" cy="205" rx="197" ry="96" fill="#e4c99f" opacity="0.45"/><use href="#scale" x="92" y="94" width="228" height="228" transform="rotate(0 206.0 208.0)"/><use href="#slice" x="96" y="89" width="142" height="142" transform="rotate(-15 167.0 160.0)"/><use href="#slice" x="203" y="94" width="135" height="135" transform="rotate(15 270.5 161.5)"/><use href="#notes" x="306" y="174" width="115" height="115" transform="rotate(9 363.5 231.5)"/></g>
+</svg>

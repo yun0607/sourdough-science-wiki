@@ -88,3 +88,10 @@
 - 2026-11-22 20:13｜正式驗收：`python3 scripts/lint_wiki.py --strict`、`python3 scripts/build_wiki_site.py`、`node --check docs/wiki.js` 皆退出 0。八篇全文逐篇比對、七份書目與回連均通過。核准資料 SHA-256 與起始值相同。原安全條件照錄，3 項待人工覆核主張均排除。
 - 2026-11-22 20:13｜外部原文入口：SRC-002～007 現用入口可讀。SRC-001 直開回 403，從索引取到同網址的已核准出版者 PDF。PMC 候選入口仍有驗證頁。完整指令、分階段結果與限制見 `reports/wiki-site-validation.txt`。
 - 本階段交付 `docs/index.html`、`docs/wiki.css`、`docs/wiki.js`。GitHub Pages 相容性以本機 HTTP 模擬驗證。
+
+## 第四階段｜獨立 HTML 教學簡報
+
+- 2026-11-22（臺灣時間）｜讀取核准 Wiki、兩批審查與網站驗證，保存核准資料及網站檔的 SHA-256 基準。Strict Lint 通過。簡報以 W001–W008 的核准正文與來源標記為證據。
+- 2026-11-22 20:29–20:34｜擷取證據、依指定題序建立 12 頁、核對 34 筆 W／SRC 配對並渲染。手繪 12 張本機水彩風 SVG。獨立初審退回 4 頁文案與 2 頁插畫，內容和圖像各經 1 輪修正並複查通過。
+- 2026-11-22 20:34–20:38｜Chrome 本機測試發現 Escape 模擬需完整鍵碼，並修正測試伺服器收尾。封面段落寬度微調。最終 6 種尺寸 × 12 頁通過 16:9 畫面、資產及版面檢查，按鈕、鍵盤、進度、深層連結、測驗、來源及返回 Wiki 通過。本機模擬 GitHub Pages 子路徑，另以 file:// 直開第 3 頁。
+- 正式驗收：Strict Lint 0 錯誤、0 警告。31 個教學項目與 34 筆證據對應通過。核准資料及 Wiki 網站檔的 SHA-256 均相符。三項安全主張維持排除。詳見 `reports/slides-validation.txt`、`reports/slide-source-map.csv` 及 `wiki/review/slides-review.md`。
