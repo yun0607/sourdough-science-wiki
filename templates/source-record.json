@@ -1,0 +1,17 @@
+{
+  "source_id": "SRC-001",
+  "title": "原文標題（待核實）",
+  "authors": [],
+  "year": null,
+  "url": "https://example.org",
+  "source_type": "academic",
+  "topics": [
+    "酸種麵包的基本原理"
+  ],
+  "raw_path": null,
+  "accessed_on": null,
+  "status": "pending",
+  "verified": "unverified",
+  "license": "待確認",
+  "notes": ""
+}

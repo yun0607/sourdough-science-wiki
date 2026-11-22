@@ -1,0 +1,183 @@
+[
+  {
+    "source_id": "SRC-001",
+    "title": "A review of sourdough starters: ecology, practices, and sensory quality with applications for baking and recommendations for future research",
+    "authors": [
+      "Martha D. Calvert",
+      "Anne A. Madden",
+      "Lauren M. Nichols",
+      "Nick M. Haddad",
+      "Jacob Lahne",
+      "Robert R. Dunn",
+      "Erin A. McKenney"
+    ],
+    "year": 2021,
+    "url": "https://peerj.com/articles/11389.pdf",
+    "source_type": "academic",
+    "topics": [
+      "酸種麵包的基本原理",
+      "麵粉與發酵條件"
+    ],
+    "raw_path": "raw/SRC-001.md",
+    "accessed_on": "2026-11-22",
+    "status": "approved",
+    "verified": "full_text_checked",
+    "license": "CC BY 4.0，見出版者 PDF 第 1 頁。",
+    "notes": "PeerJ 9:e11389，2021-05-10 出版。PMC 直連遇驗證頁，改用同篇出版者全文 PDF。對應 W001、W002。 獨立複查通過，見 wiki/review/batch-1-independent.md。",
+    "doi": "10.7717/peerj.11389",
+    "candidate_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8117929/"
+  },
+  {
+    "source_id": "SRC-002",
+    "title": "Sourdough starters exhibit similar succession patterns but develop flour-specific climax communities",
+    "authors": [
+      "Erin A. McKenney",
+      "Lauren M. Nichols",
+      "Samuel Alvarado",
+      "Shannon Hardy",
+      "Kristen Kemp",
+      "Rachael Polmanteer",
+      "April Shoemaker",
+      "Robert R. Dunn"
+    ],
+    "year": 2023,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10559884/",
+    "source_type": "academic",
+    "topics": [
+      "酸種酵母的培養與餵養",
+      "麵粉與發酵條件"
+    ],
+    "raw_path": "raw/SRC-002.md",
+    "accessed_on": "2026-11-22",
+    "status": "approved",
+    "verified": "full_text_checked",
+    "license": "CC BY 4.0。採用原創中文摘要，附出處與授權。",
+    "notes": "2023-10-04，PeerJ 11:e16163，PMCID PMC10559884。出版者 PDF 建議引文欄文章號有出入，採 PMC 與 PubMed 一致書目。對應 W005。 採用範圍經獨立複查通過，見 wiki/review/batch-2-independent.md。",
+    "doi": "10.7717/peerj.16163"
+  },
+  {
+    "source_id": "SRC-003",
+    "title": "The diversity and function of sourdough starter microbiomes",
+    "authors": [
+      "Elizabeth A Landis",
+      "Angela M Oliverio",
+      "Erin A McKenney",
+      "Lauren M Nichols",
+      "Nicole Kfoury",
+      "Megan Biango-Daniels",
+      "Leonora K Shell",
+      "Anne A Madden",
+      "Lori Shapiro",
+      "Shravya Sakunala",
+      "Kinsey Drake",
+      "Albert Robbat",
+      "Matthew Booker",
+      "Robert R Dunn",
+      "Noah Fierer",
+      "Benjamin E Wolfe"
+    ],
+    "year": 2021,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7837699/",
+    "source_type": "academic",
+    "topics": [
+      "酸種麵包的基本原理",
+      "麵粉與發酵條件"
+    ],
+    "raw_path": "raw/SRC-003.md",
+    "accessed_on": "2026-11-22",
+    "status": "approved",
+    "verified": "full_text_checked",
+    "license": "CC BY 4.0。採用原創中文摘要，附出處與授權。",
+    "notes": "2021-01-26，eLife 10:e61644，PMCID PMC7837699。CC BY 4.0 版本見 NOAA 典藏權利欄。對應 W006。 採用範圍經獨立複查通過，見 wiki/review/batch-2-independent.md。",
+    "doi": "10.7554/eLife.61644"
+  },
+  {
+    "source_id": "SRC-004",
+    "title": "Sourdough Basics: Caring for your Starter and Making Bread",
+    "authors": [
+      "CSU Extension Staff, FoodSmart Colorado"
+    ],
+    "year": 2025,
+    "url": "https://extension.colostate.edu/resource/sourdough-basics-caring-for-your-starter-and-making-bread/",
+    "source_type": "education",
+    "topics": [
+      "酸種酵母的培養與餵養",
+      "酸種麵包的完整製作"
+    ],
+    "raw_path": "raw/SRC-004.md",
+    "accessed_on": "2026-11-22",
+    "status": "approved",
+    "verified": "full_text_checked",
+    "license": "原頁公開可讀，未見開放授權。僅採用以原創文字表達的事實摘要及來源定位。",
+    "notes": "頁首標示 Reviewed: October 2025，year 為審閱年；首刊日期未載。對應 W003、W004。 獨立複查通過，見 wiki/review/batch-1-independent.md。",
+    "date_type": "reviewed"
+  },
+  {
+    "source_id": "SRC-005",
+    "title": "Sourdough Starter Best Practices",
+    "authors": [
+      "CSU Extension Staff, FoodSmart Colorado"
+    ],
+    "year": 2025,
+    "url": "https://extension.colostate.edu/resource/sourdough-starter-best-practices/",
+    "source_type": "education",
+    "topics": [
+      "常見問題與失敗原因",
+      "營養、健康與食品安全"
+    ],
+    "raw_path": "raw/SRC-005.md",
+    "accessed_on": "2026-11-22",
+    "status": "approved",
+    "verified": "full_text_checked",
+    "license": "原頁公開可讀，未見開放授權。僅採原創事實摘要和定位。",
+    "notes": "2025-10 審閱。對應 W007。三項安全主張暫停，詳見來源摘要及第二批審查。 採用範圍經獨立複查通過，見 wiki/review/batch-2-independent.md。",
+    "date_type": "reviewed"
+  },
+  {
+    "source_id": "SRC-006",
+    "title": "Nutritional benefits of sourdoughs: A systematic review",
+    "authors": [
+      "Léa Ribet",
+      "Robin Dessalles",
+      "Corinne Lesens",
+      "Nele Brusselaers",
+      "Mickaël Durand-Dubief"
+    ],
+    "year": 2023,
+    "url": "https://repository.uantwerpen.be/docman/irua/8bb026/196750.pdf",
+    "source_type": "academic",
+    "topics": [
+      "營養、健康與食品安全"
+    ],
+    "raw_path": "raw/SRC-006.md",
+    "accessed_on": "2026-11-22",
+    "status": "approved",
+    "verified": "full_text_checked",
+    "license": "CC BY 4.0。採用原創中文摘要，附出處與授權。",
+    "notes": "2022-12-16 線上先行，2023 年 1 月刊載於 Advances in Nutrition 14(1):22–29。PMC 遇驗證頁，改用同 DOI 的大學典藏出版版。對應 W008。 採用範圍經獨立複查通過，見 wiki/review/batch-2-independent.md。",
+    "candidate_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10103004/",
+    "doi": "10.1016/j.advnut.2022.10.003"
+  },
+  {
+    "source_id": "SRC-007",
+    "title": "Sourdough Bread: 101",
+    "authors": [
+      "University of Illinois Extension"
+    ],
+    "year": 2024,
+    "url": "https://extension.illinois.edu/sites/default/files/2024-11/sourdough_101_final.pdf",
+    "source_type": "education",
+    "topics": [
+      "酸種酵母的培養與餵養",
+      "酸種麵包的完整製作",
+      "常見問題與失敗原因"
+    ],
+    "raw_path": "raw/SRC-007.md",
+    "accessed_on": "2026-11-22",
+    "status": "approved",
+    "verified": "full_text_checked",
+    "license": "PDF 第 7 頁列 © 2024 University of Illinois Board of Trustees 及重用洽詢方式。僅採原創事實摘要與定位。",
+    "notes": "全文件題名 Sourdough Bread: 101，第 2 頁為 Sourdough Science。2024-09 修訂，University of Illinois Extension 機構署名。對應 W005、W007、W008。酸化安全保證暫停。 採用範圍經獨立複查通過，見 wiki/review/batch-2-independent.md。",
+    "date_type": "modified"
+  }
+]

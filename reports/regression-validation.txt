@@ -1,0 +1,10 @@
+# Real regression test; sources.json restored afterward
+Injected duplicate URL in a temporary copy, then ran lint:
+Sourdough Wiki Lint | min_sources=0
+Sources: 7 | Approved sources: 0 | Articles: 0 | Approved articles: 0 | Topics: 0/6
+WARNING: no Wiki articles yet (project scaffold)
+WARNING: 0 sources approved; no ingest has been performed
+ERROR: SRC-002: duplicate URL
+RESULT: FAIL (1 errors, 2 warnings)
+
+Exit: 1 (EXPECTED: error detected)

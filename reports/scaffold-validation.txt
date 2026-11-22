@@ -1,0 +1,36 @@
+# Actual validation at scaffold generation
+
+$ python scripts/lint_wiki.py
+Sourdough Wiki Lint | min_sources=0
+Sources: 7 | Approved sources: 0 | Articles: 0 | Approved articles: 0 | Topics: 0/6
+WARNING: no Wiki articles yet (project scaffold)
+WARNING: 0 sources approved; no ingest has been performed
+RESULT: PASS (0 errors, 2 warnings)
+Exit: 0
+
+$ python scripts/lint_wiki.py --strict
+Sourdough Wiki Lint | strict
+Sources: 7 | Approved sources: 0 | Articles: 0 | Approved articles: 0 | Topics: 0/6
+WARNING: no Wiki articles yet (project scaffold)
+WARNING: 0 sources approved; no ingest has been performed
+ERROR: approved sources 0/7
+ERROR: cited approved sources 0/7
+ERROR: strict requires all 7 sources approved
+ERROR: strict requires all 6 Wiki topics covered
+ERROR: strict requires every source cited by approved articles
+RESULT: FAIL (5 errors, 2 warnings)
+Exit: 1 (EXPECTED: incomplete)
+
+$ python scripts/build_wiki_site.py
+Sourdough Wiki Lint | strict
+Sources: 7 | Approved sources: 0 | Articles: 0 | Approved articles: 0 | Topics: 0/6
+WARNING: no Wiki articles yet (project scaffold)
+WARNING: 0 sources approved; no ingest has been performed
+ERROR: approved sources 0/7
+ERROR: cited approved sources 0/7
+ERROR: strict requires all 7 sources approved
+ERROR: strict requires all 6 Wiki topics covered
+ERROR: strict requires every source cited by approved articles
+RESULT: FAIL (5 errors, 2 warnings)
+Cannot build: strict Wiki validation failed.
+Exit: 1 (EXPECTED: no site until sources approved)

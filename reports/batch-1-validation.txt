@@ -1,0 +1,68 @@
+酸種麵包科學 Wiki｜第一批 Lint 執行紀錄
+2026-11-22（臺灣時間）
+
+Shell 指令查找
+$ python scripts/lint_wiki.py
+zsh:1: command not found: python
+exit 127
+
+指令介面
+$ python3 scripts/lint_wiki.py --help
+usage: lint_wiki.py [-h] [--strict]
+                    [--min-approved-sources MIN_APPROVED_SOURCES]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --strict
+  --min-approved-sources MIN_APPROVED_SOURCES
+exit 0
+
+審查前草稿 Lint
+$ python3 scripts/lint_wiki.py
+Sourdough Wiki Lint | min_sources=0
+Sources: 7 | Approved sources: 0 | Articles: 4 | Approved articles: 0 | Topics: 0/6
+WARNING: 0 sources approved; no ingest has been performed
+RESULT: PASS (0 errors, 1 warnings)
+exit 0
+
+第一輪草稿修正後
+$ python3 scripts/lint_wiki.py
+Sourdough Wiki Lint | min_sources=0
+Sources: 7 | Approved sources: 0 | Articles: 4 | Approved articles: 0 | Topics: 0/6
+WARNING: 0 sources approved; no ingest has been performed
+RESULT: PASS (0 errors, 1 warnings)
+exit 0
+
+工作區版本控制
+$ git status --short
+fatal: not a git repository (or any of the parent directories): .git
+exit 128
+
+原文取得與權利驗證（網頁工具）
+
+SRC-001
+- PMC 原候選頁直開遇 reCAPTCHA。出版者 HTML 回傳 HTTP 403。
+- 同篇出版者 PDF 由索引開啟後取得可讀全文。PDF 第 1 頁核對作者、出版日、DOI 與 CC BY 4.0。PMC 搜尋索引也對應同題同 DOI。
+- 主要入口更新為出版者 PDF，PMC 網址留存於 candidate_url。來源查閱復原共 1 輪。
+
+SRC-004
+- CSU Extension 指南原頁可讀。頁面署名 CSU Extension Staff, FoodSmart Colorado，日期為 2025 年 10 月審閱。
+- 未見開放授權。僅採用原創事實摘要、書目與證據位置。
+- 獨立審查過程與條目修正見 wiki/review/batch-1-independent.md。
+
+核准狀態 Lint
+$ python3 scripts/lint_wiki.py
+Sourdough Wiki Lint | min_sources=0
+Sources: 7 | Approved sources: 2 | Articles: 4 | Approved articles: 4 | Topics: 4/6
+RESULT: PASS (0 errors, 0 warnings)
+exit 0
+
+核准狀態第一批門檻 Lint
+$ python3 scripts/lint_wiki.py --min-approved-sources 2
+Sourdough Wiki Lint | min_sources=2
+Sources: 7 | Approved sources: 2 | Articles: 4 | Approved articles: 4 | Topics: 4/6
+RESULT: PASS (0 errors, 0 warnings)
+exit 0
+
+第一批範圍驗證（Python 3 讀取狀態與記事並比對起始來源資料）
+PASS: only SRC-001 and SRC-004 approved; five second-batch records match baseline; no Wiki site or HTML slides generated.

@@ -1,0 +1,75 @@
+酸種麵包科學 Wiki｜第二批驗收紀錄
+日期 2026-11-22（臺灣時間）
+
+第二批起點，第一批門檻復驗
+$ python3 scripts/lint_wiki.py --min-approved-sources 2
+Sourdough Wiki Lint | min_sources=2
+Sources: 7 | Approved sources: 2 | Articles: 4 | Approved articles: 4 | Topics: 4/6
+RESULT: PASS (0 errors, 0 warnings)
+exit 0
+
+來源取得與書目核對（網頁工具）
+SRC-002：PMC 原入口有完整正文。與出版者 PDF 和 PubMed 交叉核對 DOI 10.7717/peerj.16163，文章號採 PMC、PubMed 一致的 e16163。
+SRC-003：PMC 原入口有完整正文。出版者 HTML 直開遇 Client Challenge。出版者 PDF 可讀取，NOAA 典藏書目核對 CC BY 4.0，DOI 10.7554/eLife.61644。
+SRC-005：CSU 原頁有正文，日期為 2025-10 審閱。
+SRC-006：PMC 直開遇 reCAPTCHA，期刊全文頁返回 HTTP 403。經 DOI 10.1016/j.advnut.2022.10.003 核對安特衛普大學所存出版版 PDF，可讀取正文。
+SRC-007：原始七頁 PDF 可讀，指定的 Sourdough Science 為 Sourdough Bread: 101 第 2 頁，第 7 頁標示 2024-09 修訂及版權。
+
+第二批草稿，獨立初審前
+$ python3 scripts/lint_wiki.py
+Sourdough Wiki Lint | min_sources=0
+Sources: 7 | Approved sources: 2 | Articles: 8 | Approved articles: 4 | Topics: 4/6
+RESULT: PASS (0 errors, 0 warnings)
+exit 0
+
+第 1 輪修正後的草稿
+$ python3 scripts/lint_wiki.py
+Sourdough Wiki Lint | min_sources=0
+Sources: 7 | Approved sources: 2 | Articles: 8 | Approved articles: 4 | Topics: 4/6
+RESULT: PASS (0 errors, 0 warnings)
+exit 0
+
+獨立初審的退回與處理
+W005：調整早期膨脹敘述，增補等重餵養的分份步驟。SRC-002 摘要修正 Results 小節定位。
+W006：初審通過，同一輪把「讀數」改為白話。
+W007：釐清發黴時丟棄的對象及氣味觀察範圍。
+W008：補清試驗人群、配方與比較方式，移除未有指定原文支持的乳糜瀉定義。SRC-006 摘要校正配方說明及第 25–27 頁定位。
+自動內容修正共一輪。逐篇原文複查詳見 wiki/review/batch-2-independent.md。
+
+暫存核准工具語法檢查：python3 -m py_compile 嘗試寫入使用者 Python 快取而遭拒（PermissionError）。改用不寫快取的 ast.parse 檢查兩個工具檔，均通過。
+
+核准狀態一般 Lint
+$ python3 scripts/lint_wiki.py
+Sourdough Wiki Lint | min_sources=0
+Sources: 7 | Approved sources: 7 | Articles: 8 | Approved articles: 8 | Topics: 6/6
+RESULT: PASS (0 errors, 0 warnings)
+exit 0
+
+核准狀態 Strict Lint
+$ python3 scripts/lint_wiki.py --strict
+Sourdough Wiki Lint | strict
+Sources: 7 | Approved sources: 7 | Articles: 8 | Approved articles: 8 | Topics: 6/6
+RESULT: PASS (0 errors, 0 warnings)
+exit 0
+
+額外驗收：保存第一批成果、逐篇書目／正文引用、索引和範圍
+$ python3 /tmp/sourdough-batch2.jmqd0J/verify.py
+PASS: first-batch sources, W001–W004, raw summaries, review, reports and original log retained.
+PASS: 7 approved sources, 8 approved articles, 6 categories; author/year/title/URL/DOI match; article/index links and body citations verified.
+SRC-001: W001, W002
+SRC-002: W005
+SRC-003: W006
+SRC-004: W003, W004
+SRC-005: W007
+SRC-006: W008
+SRC-007: W005, W007, W008
+PASS: no Wiki site or HTML slides generated.
+exit 0
+
+批次比較（依兩批真實初審及複查紀錄）
+原始入口需要替換：第一批 1 份（SRC-001），第二批 1 份（SRC-006）。
+初審後書目補件：第一批 W001、W002，第二批 0 篇。
+初審後證據定位修正：第一批 1 份摘要，第二批 2 份摘要。
+兩批均有 3 篇初審退回、1 篇用語調整，均在 1 輪內容修正後通過。可觀察到書目補件減少，未觀察到整體輪次下降。
+第二批未納入正式條目的 needs_human_review 共 3 項：酸或酸鹼值放行、通用烘烤安全保證、白色團塊辨認可食性。
+工作區未有 .git，以暫存的第一批原始檔及來源記錄比對範圍。

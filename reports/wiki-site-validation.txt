@@ -1,0 +1,87 @@
+酸種麵包科學 Wiki｜第三階段網站驗證
+2026-11-22（臺灣時間）
+
+輸入核對：已讀取 AGENTS.md、sources.json、wiki/index.md、八篇 Wiki 文章、wiki/log.md、兩份獨立審查及兩份批次報告。
+原生成腳本檢閱發現：將 Markdown 網址轉成文字，缺少文章目錄、交叉連結、分步列表與回到頂端。HTML 生成節點調整後，由核准 Markdown 和來源書目建立三個靜態站檔。
+
+實測錯誤與修正
+1. 瀏覽器環境：Chrome --headless --dump-dom 試啟動退出 134。python3 -m http.server 8765 --bind 127.0.0.1 --directory docs 在沙箱內綁定本機連接埠收到 PermissionError，退出 1。改以獲准的 Chrome 隔離暫存設定檔與本機伺服器連線。此為環境調整。
+2. 網頁修正第 1 輪：瀏覽器初跑載入資源和六種寬度均通過，390px 的頁內導覽測到回到頂端失敗。#top 在黏附頁首，點擊後 scrollY=12417，預期為 0。回到 HTML 生成節點，把 #top 放到頁首前方的文件起點，重建後複測通過。網站自動修正共 1 輪。
+
+Strict Wiki Lint
+$ python3 scripts/lint_wiki.py --strict
+Sourdough Wiki Lint | strict
+Sources: 7 | Approved sources: 7 | Articles: 8 | Approved articles: 8 | Topics: 6/6
+RESULT: PASS (0 errors, 0 warnings)
+exit 0
+
+重新生成核准文章網頁
+$ python3 scripts/build_wiki_site.py
+Sourdough Wiki Lint | strict
+Sources: 7 | Approved sources: 7 | Articles: 8 | Approved articles: 8 | Topics: 6/6
+RESULT: PASS (0 errors, 0 warnings)
+Built /Users/michelle/Downloads/sourdough-science-wiki/docs/index.html from 8 approved articles.
+exit 0
+
+結構、逐篇文本、引用、安全邊界與相對資源比對
+$ python3 /tmp/sourdough-site.M6bK0H/verify_site.py
+PASS: W001 exact visible Markdown text, category and citations (SRC-001).
+PASS: W002 exact visible Markdown text, category and citations (SRC-001).
+PASS: W003 exact visible Markdown text, category and citations (SRC-004).
+PASS: W004 exact visible Markdown text, category and citations (SRC-004).
+PASS: W005 exact visible Markdown text, category and citations (SRC-002, SRC-007).
+PASS: W006 exact visible Markdown text, category and citations (SRC-003).
+PASS: W007 exact visible Markdown text, category and citations (SRC-005, SRC-007).
+PASS: W008 exact visible Markdown text, category and citations (SRC-006, SRC-007).
+PASS: SRC-001 complete bibliography, approved full-text URL and article backlinks.
+PASS: SRC-002 complete bibliography, approved full-text URL and article backlinks.
+PASS: SRC-003 complete bibliography, approved full-text URL and article backlinks.
+PASS: SRC-004 complete bibliography, approved full-text URL and article backlinks.
+PASS: SRC-005 complete bibliography, approved full-text URL and article backlinks.
+PASS: SRC-006 complete bibliography, approved full-text URL and article backlinks.
+PASS: SRC-007 complete bibliography, approved full-text URL and article backlinks.
+PASS: six topics, eight jump links, unique IDs, all in-page targets and subpath assets.
+PASS: approved safety context preserved verbatim and three excluded claims absent from the site.
+exit 0
+
+JavaScript 語法
+$ node --check docs/wiki.js
+exit 0
+
+核准資料雜湊比對
+$ shasum -a 256 -c /tmp/sourdough-site.M6bK0H/wiki-input.sha256
+sources.json: OK
+wiki/index.md: OK
+wiki/articles/W001-starter-science.md: OK
+wiki/articles/W002-fermentation-conditions.md: OK
+wiki/articles/W003-feed-established-starter.md: OK
+wiki/articles/W004-first-loaves.md: OK
+wiki/articles/W005-young-starter.md: OK
+wiki/articles/W006-starter-aroma-and-rise.md: OK
+wiki/articles/W007-starter-troubleshooting.md: OK
+wiki/articles/W008-health-evidence.md: OK
+exit 0
+
+PASS: 重新生成的 HTML SHA-256 未變（4d78fc2ae3164c2499ce57c41673fa7b9925992adef85f91976fb33df695129f）。
+
+Chrome 本機實測：暫存腳本僅綁定 127.0.0.1，模擬 GitHub Pages 專案子路徑，逐一觸發頁內連結。
+$ node /tmp/sourdough-site.M6bK0H/browser.mjs
+Chrome/158.0.8127.36 via localhost project subpath /sourdough-science-wiki/
+PASS: subpath HTML/CSS/JS HTTP load, computed CSS and deep-link JS active state.
+Layout 320px {"viewport":320,"scroll":320,"clipped":[]}
+Layout 375px {"viewport":375,"scroll":375,"clipped":[]}
+Layout 390px {"viewport":390,"scroll":390,"clipped":[]}
+Layout 768px {"viewport":768,"scroll":768,"clipped":[]}
+Layout 1024px {"viewport":1024,"scroll":1024,"clipped":[]}
+Layout 1440px {"viewport":1440,"scroll":1440,"clipped":[]}
+PASS: all 93 links activate visible targets and return to top at 390px.
+PASS: all 93 links activate visible targets and return to top at 1440px.
+PASS: no JavaScript exceptions or failed resource loads.
+PASS: all articles and browser deep link available when page JavaScript was disabled.
+exit 0
+手動公開入口回查（網頁工具）
+SRC-002～SRC-007 的現用全文入口可讀。SRC-001 的 PeerJ PDF 直開回 HTTP 403，經搜尋索引取得同一網址的 PDF。PMC 原候選網址遇 reCAPTCHA，DOI 轉向也回 403。網站保留原已核准書目與各入口，外部網站回應會依存取情境而異。
+未對 GitHub 遠端 Repo 或 Pages 設定做變更。子路徑相容性以本機 HTTP 及 Chrome 驗證。
+
+網站輸出：docs/index.html、docs/wiki.css、docs/wiki.js。
+整體：網站驗收通過。8 篇核准文章的可見文字、段落引用及食品安全條件與 Markdown 相符。3 項待人工覆核安全主張均未輸出。
