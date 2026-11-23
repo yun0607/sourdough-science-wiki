@@ -86,3 +86,201 @@ exit 0
 通過來源對應、獨立科學與食品安全審查、新手可讀性與教學順序審查。
 通過桌面完整 16:9、手機／平板 16:9 視覺框與下方可讀講解、全部 12 張插畫和系統字型、翻頁與指定頁連結、頁碼／章節進度、測驗與書目對話框、GitHub Pages 子路徑模擬。
 三類人工覆核安全主張仍排除，亦保留血糖及麩質敘述的證據限制。核准 Markdown、來源表與三個 Wiki 網站檔案的雜湊相符。
+
+
+============================================================
+第五階段｜教學可讀性重設
+2026-11-22 起稿，2026-11-23 最終驗收（臺灣時間）
+
+讀取 AGENTS.md、8 篇核准文章、sources.json、舊 HTML/CSS/JS、來源對照及既有驗證。舊版與 Wiki 輸入先快照，瀏覽器測試以獨立本機 HTTP 提供同一專案子路徑。
+公開書介只用於教學方法，採用「看圖觀察 → 給一個操作 → 回到證據」的練習路線。圖解、標籤與文案皆自行編寫。
+公開介紹：https://www.books.com.tw/products/0011017248
+
+範圍缺口與調整
+- Wiki 有 W008 的白小麥酸種麵包及白小麥酵母麵包試驗，缺少對所有一般麵包的比較。第 2 頁限定這兩款，第 15 頁再說明健康證據。
+- Wiki 沒有從零養種的通用逐日配方、養成天數或成熟判定。第 5 至 8 頁教準備、W005 的等重餵養例與如何看多次罐高，第 6 頁保留研究條件。做麵包的判斷另限定在 W004 的一份酵頭與有蓋鑄鐵鍋配方。
+- 70 個教學項目、88 筆證據對應，涵蓋 8 篇 W001–W008 與 7 份 SRC-001–SRC-007。32 個本機水彩風 SVG 構成 16 張有標示的圖解。食品安全三項待人工覆核主張仍排除。
+
+前後量測與排版取捨
+- 舊版 390px 全 12 頁主體文字 15.2px，標題 20.02–24px。1440px 主體文字 15.984–18px，標題 52.688–71.04px。封面插畫超出自身圖框的內容寬度，頁面本身沒有水平捲動。舊版主要採文字段落和並列整張插畫。
+- 新版 320、390px 主體文字 18px，標題 28px；768px 內文 19px，標題 36.864px；1024、1440px 主體文字 22px，標題 40.992、48px。內容依頁面自然增高，手機將圖解卡片垂直排列。使用比較、雙路原理、狀態時間軸、步驟、問題處理與回顧地圖等版型。
+- 每頁量測主體文字、標題、頁面水平溢出、圖卡與主要區塊是否超出、插畫載入、頁碼及進度、翻頁控制是否在內容外。圖解教學吻合度由獨立審查逐頁比對，另目視桌面與手機的代表性畫面。
+
+實際退回與修正
+1. 內容一輪：第 2 頁限定比較對象，第 6 頁改成觀察問句與清楚標示實驗觀察期，第 13 頁明列食物溫度計與配方適用範圍，第 16 頁補全明顯發黴處置及回顧連結。第 9 頁同輪精確化試驗措辭。複查通過。
+2. 插畫第一輪：第 5 頁補筆記，第 8 頁三罐加上同高標線，第 12 頁標示向下收的方向，第 13 頁補探針。第 12 頁第二輪：第三格原用帶木匙的碗，可能被理解成最後發酵仍需攪拌，改為覆布容器。複查通過。
+3. 排版一輪：新版 Chrome 初跑於 768、1024、1440px 各有 7 頁被測得流程箭頭超出卡片自身區塊。將箭頭移到圖解容器的卡片間距上，80 組版面複測皆無溢出警示。
+4. 測試工具：舊版初測把已發現的封面問題當成中止條件，改成完整記錄 24 組比較基準。新版第二次瀏覽器測試通過 80 組版面量測，工具後續對重新載入時測驗預設展開的斷言不符實際收合設定，調整為先驗證收合，再實際展開及收合。2026-11-22 最終重跑未執行，原因是自動審核用量限制。2026-11-23 最終重跑退出 0。此項屬測試工具，不計入簡報修正輪次。
+5. 圖文初審、成品複查、安全條件與未取用的範圍另見 wiki/review/slides-review.md。
+
+逐頁瀏覽器量測（所有尺寸皆在本機 /sourdough-science-wiki/slides/）
+欄位：視窗寬度、頁碼、主要文字 px、標題 px、溢出標記、插畫載入、翻頁列與內容分離
+
+舊版
+$ node /tmp/sourdough-redesign/measure.mjs old
+Chrome/158.0.8127.36 before redesign /sourdough-science-wiki/slides/
+ 390   1  15.2–15.2  24  無  OK  OK
+ 390   2  15.2–15.2  20.02  無  OK  OK
+ 390   3  15.2–15.2  20.02  無  OK  OK
+ 390   4  15.2–15.2  20.02  無  OK  OK
+ 390   5  15.2–15.2  20.02  無  OK  OK
+ 390   6  15.2–15.2  20.02  無  OK  OK
+ 390   7  15.2–15.2  20.02  無  OK  OK
+ 390   8  15.2–15.2  20.02  無  OK  OK
+ 390   9  15.2–15.2  20.02  無  OK  OK
+ 390  10  15.2–15.2  20.02  無  OK  OK
+ 390  11  15.2–15.2  20.02  無  OK  OK
+ 390  12  15.2–15.2  20.02  無  OK  OK
+1440   1  18–18  71.04  artwork  OK  OK
+1440   2  18–18  52.688  無  OK  OK
+1440   3  18–18  52.688  無  OK  OK
+1440   4  18–18  52.688  無  OK  OK
+1440   5  18–18  52.688  無  OK  OK
+1440   6  18–18  52.688  無  OK  OK
+1440   7  18–18  52.688  無  OK  OK
+1440   8  15.984–15.984  52.688  無  OK  OK
+1440   9  18–18  52.688  無  OK  OK
+1440  10  18–18  52.688  無  OK  OK
+1440  11  18–18  52.688  無  OK  OK
+1440  12  18–18  52.688  無  OK  OK
+PASS: all 24 viewport/page measurements, artwork loading and controls/keyboard/direct route on project subpath.
+exit 0
+
+新版
+$ node /tmp/sourdough-redesign/measure.mjs new
+Chrome/158.0.8127.36 after redesign /sourdough-science-wiki/slides/
+ 320   1  18–18  28  無  OK  OK
+ 320   2  18–18  28  無  OK  OK
+ 320   3  18–18  28  無  OK  OK
+ 320   4  18–18  28  無  OK  OK
+ 320   5  18–18  28  無  OK  OK
+ 320   6  18–18  28  無  OK  OK
+ 320   7  18–18  28  無  OK  OK
+ 320   8  18–18  28  無  OK  OK
+ 320   9  18–18  28  無  OK  OK
+ 320  10  18–18  28  無  OK  OK
+ 320  11  18–18  28  無  OK  OK
+ 320  12  18–18  28  無  OK  OK
+ 320  13  18–18  28  無  OK  OK
+ 320  14  18–18  28  無  OK  OK
+ 320  15  18–18  28  無  OK  OK
+ 320  16  18–18  28  無  OK  OK
+ 390   1  18–18  28  無  OK  OK
+ 390   2  18–18  28  無  OK  OK
+ 390   3  18–18  28  無  OK  OK
+ 390   4  18–18  28  無  OK  OK
+ 390   5  18–18  28  無  OK  OK
+ 390   6  18–18  28  無  OK  OK
+ 390   7  18–18  28  無  OK  OK
+ 390   8  18–18  28  無  OK  OK
+ 390   9  18–18  28  無  OK  OK
+ 390  10  18–18  28  無  OK  OK
+ 390  11  18–18  28  無  OK  OK
+ 390  12  18–18  28  無  OK  OK
+ 390  13  18–18  28  無  OK  OK
+ 390  14  18–18  28  無  OK  OK
+ 390  15  18–18  28  無  OK  OK
+ 390  16  18–18  28  無  OK  OK
+ 768   1  19–19  36.864  無  OK  OK
+ 768   2  19–19  36.864  無  OK  OK
+ 768   3  19–19  36.864  無  OK  OK
+ 768   4  19–19  36.864  無  OK  OK
+ 768   5  19–19  36.864  無  OK  OK
+ 768   6  19–19  36.864  無  OK  OK
+ 768   7  19–19  36.864  無  OK  OK
+ 768   8  19–19  36.864  無  OK  OK
+ 768   9  19–19  36.864  無  OK  OK
+ 768  10  19–19  36.864  無  OK  OK
+ 768  11  19–19  36.864  無  OK  OK
+ 768  12  19–19  36.864  無  OK  OK
+ 768  13  19–19  36.864  無  OK  OK
+ 768  14  19–19  36.864  無  OK  OK
+ 768  15  19–19  36.864  無  OK  OK
+ 768  16  19–19  36.864  無  OK  OK
+1024   1  22–22  40.992  無  OK  OK
+1024   2  22–22  40.992  無  OK  OK
+1024   3  22–22  40.992  無  OK  OK
+1024   4  22–22  40.992  無  OK  OK
+1024   5  22–22  40.992  無  OK  OK
+1024   6  22–22  40.992  無  OK  OK
+1024   7  22–22  40.992  無  OK  OK
+1024   8  22–22  40.992  無  OK  OK
+1024   9  22–22  40.992  無  OK  OK
+1024  10  22–22  40.992  無  OK  OK
+1024  11  22–22  40.992  無  OK  OK
+1024  12  22–22  40.992  無  OK  OK
+1024  13  22–22  40.992  無  OK  OK
+1024  14  22–22  40.992  無  OK  OK
+1024  15  22–22  40.992  無  OK  OK
+1024  16  22–22  40.992  無  OK  OK
+1440   1  22–22  48  無  OK  OK
+1440   2  22–22  48  無  OK  OK
+1440   3  22–22  48  無  OK  OK
+1440   4  22–22  48  無  OK  OK
+1440   5  22–22  48  無  OK  OK
+1440   6  22–22  48  無  OK  OK
+1440   7  22–22  48  無  OK  OK
+1440   8  22–22  48  無  OK  OK
+1440   9  22–22  48  無  OK  OK
+1440  10  22–22  48  無  OK  OK
+1440  11  22–22  48  無  OK  OK
+1440  12  22–22  48  無  OK  OK
+1440  13  22–22  48  無  OK  OK
+1440  14  22–22  48  無  OK  OK
+1440  15  22–22  48  無  OK  OK
+1440  16  22–22  48  無  OK  OK
+PASS: quiz disclosure and knowledge-map/chapter jump links.
+PASS: all 80 viewport/page measurements, artwork loading and controls/keyboard/direct route on project subpath.
+exit 0
+
+最終靜態檢查
+
+$ python3 scripts/lint_wiki.py --strict
+Sourdough Wiki Lint | strict
+Sources: 7 | Approved sources: 7 | Articles: 8 | Approved articles: 8 | Topics: 6/6
+RESULT: PASS (0 errors, 0 warnings)
+exit 0
+
+$ python3 /tmp/sourdough-redesign/check.py
+PASS: slide 01 approved mappings W001/SRC-001
+PASS: slide 02 approved mappings W001/SRC-001, W008/SRC-006
+PASS: slide 03 approved mappings W001/SRC-001
+PASS: slide 04 approved mappings W001/SRC-001
+PASS: slide 05 approved mappings W001/SRC-001, W005/SRC-007, W007/SRC-005, W007/SRC-007
+PASS: slide 06 approved mappings W005/SRC-002, W005/SRC-007
+PASS: slide 07 approved mappings W003/SRC-004, W005/SRC-007
+PASS: slide 08 approved mappings W005/SRC-007
+PASS: slide 09 approved mappings W002/SRC-001, W006/SRC-003
+PASS: slide 10 approved mappings W004/SRC-004, W005/SRC-007
+PASS: slide 11 approved mappings W004/SRC-004
+PASS: slide 12 approved mappings W004/SRC-004
+PASS: slide 13 approved mappings W004/SRC-004
+PASS: slide 14 approved mappings W007/SRC-005, W007/SRC-007
+PASS: slide 15 approved mappings W008/SRC-006, W008/SRC-007
+PASS: slide 16 approved mappings W001/SRC-001, W002/SRC-001, W004/SRC-004, W005/SRC-007, W007/SRC-005, W007/SRC-007, W008/SRC-006
+PASS: 70 teaching items, 88 reviewed evidence rows, 16 slides, 32 SVG assets with valid local references.
+PASS: all local links, Wiki fragments, quiz/source-map coverage, and excluded safety-text checks.
+exit 0
+
+$ node --check docs/slides/slides.js
+exit 0
+
+$ shasum -a 256 -c /tmp/sourdough-redesign/wiki.sha256
+sources.json: OK
+wiki/index.md: OK
+wiki/articles/W001-starter-science.md: OK
+wiki/articles/W002-fermentation-conditions.md: OK
+wiki/articles/W003-feed-established-starter.md: OK
+wiki/articles/W004-first-loaves.md: OK
+wiki/articles/W005-young-starter.md: OK
+wiki/articles/W006-starter-aroma-and-rise.md: OK
+wiki/articles/W007-starter-troubleshooting.md: OK
+wiki/articles/W008-health-evidence.md: OK
+docs/index.html: OK
+docs/wiki.css: OK
+docs/wiki.js: OK
+exit 0
+
+最終狀態
+- 桌面及手機相對路徑、插畫、上一頁／下一頁、左右方向鍵、直接跳頁、章節定位、進度、測驗展開／收合及來源對話框皆通過。GitHub Pages 子路徑為本機模擬。
+- 核准知識庫、索引與既有 Wiki 網站檔案雜湊均相符。新版完整配方與精確用量連到 W004。較長手機頁可垂直捲動。

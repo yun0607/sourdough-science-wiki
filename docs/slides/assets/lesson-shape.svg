@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="390" viewBox="0 0 480 390"><defs>
+ <filter id="wash" x="-15%" y="-15%" width="130%" height="130%">
+   <feTurbulence type="fractalNoise" baseFrequency=".047" numOctaves="3" seed="9" result="grain"/>
+   <feDisplacementMap in="SourceGraphic" in2="grain" scale="2.8" xChannelSelector="R" yChannelSelector="G"/>
+ </filter>
+ <radialGradient id="crust" cx="41%" cy="30%" r="73%"><stop stop-color="#f2d49a"/><stop offset=".55" stop-color="#c59563"/><stop offset="1" stop-color="#946347"/></radialGradient>
+ <linearGradient id="glass" x2="1" y2="1"><stop stop-color="#e1e4cc" stop-opacity=".8"/><stop offset=".54" stop-color="#fcf4e4" stop-opacity=".55"/><stop offset="1" stop-color="#aeb293" stop-opacity=".8"/></linearGradient>
+ <linearGradient id="batter" x2="0" y2="1"><stop stop-color="#e5bf85"/><stop offset="1" stop-color="#ba8a61"/></linearGradient>
+ <linearGradient id="ceramic" x2="0" y2="1"><stop stop-color="#d2d1af"/><stop offset="1" stop-color="#939b7c"/></linearGradient>
+ <marker id="arrow" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="5" markerHeight="5" orient="auto"><path d="M2 2L9 6 2 10" fill="none" stroke="#85644d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
+</defs><symbol id="dough" viewBox="0 0 160 160">
+ <path d="M16 104Q21 82 46 74Q70 48 104 63Q135 70 145 95Q149 113 118 122Q63 134 29 120Q17 115 16 104Z" fill="#e8c897" stroke="#ac835e" stroke-width="2.3"/>
+ <path d="M37 99Q60 72 93 76M100 72Q117 76 124 87" fill="none" stroke="#f8e7c5" stroke-width="5" stroke-linecap="round"/>
+ <path d="M72 111Q108 115 134 102" fill="none" stroke="#c89c6c" stroke-width="2"/>
+</symbol><symbol id="hands" viewBox="0 0 160 160">
+ <path d="M18 77Q21 87 36 91Q57 98 73 90Q79 85 75 81L68 80L82 71Q87 64 79 61L60 66Q50 66 47 54L42 36Q36 33 34 40L36 59L18 49Z" fill="#d6a788" stroke="#9e765e" stroke-width="2.2"/>
+ <path d="M144 78Q140 89 126 92Q106 99 89 90Q83 86 88 81L95 79L79 71Q74 65 82 62L101 66Q111 67 114 56L119 37Q126 34 127 41L125 59L144 49Z" fill="#d6a788" stroke="#9e765e" stroke-width="2.2"/>
+ <path d="M51 100Q74 111 91 100M110 101Q91 108 81 105" fill="none" stroke="#9b7657" stroke-width="2" stroke-linecap="round"/>
+</symbol><g filter="url(#wash)"><ellipse cx="238" cy="229" rx="168" ry="69" fill="#e4c99f" opacity="0.45"/><use href="#dough" x="50" y="37" width="203" height="203" transform="rotate(-3 151.5 138.5)"/><use href="#hands" x="221" y="59" width="205" height="205" transform="rotate(7 323.5 161.5)"/><path d="M360 181q5 33-28 45" fill="none" stroke="#85644d" stroke-width="3" stroke-dasharray="4 5" stroke-linecap="round" marker-end="url(#arrow)"/></g></svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="390" viewBox="0 0 480 390"><defs>
+ <filter id="wash" x="-15%" y="-15%" width="130%" height="130%">
+   <feTurbulence type="fractalNoise" baseFrequency=".047" numOctaves="3" seed="9" result="grain"/>
+   <feDisplacementMap in="SourceGraphic" in2="grain" scale="2.8" xChannelSelector="R" yChannelSelector="G"/>
+ </filter>
+ <radialGradient id="crust" cx="41%" cy="30%" r="73%"><stop stop-color="#f2d49a"/><stop offset=".55" stop-color="#c59563"/><stop offset="1" stop-color="#946347"/></radialGradient>
+ <linearGradient id="glass" x2="1" y2="1"><stop stop-color="#e1e4cc" stop-opacity=".8"/><stop offset=".54" stop-color="#fcf4e4" stop-opacity=".55"/><stop offset="1" stop-color="#aeb293" stop-opacity=".8"/></linearGradient>
+ <linearGradient id="batter" x2="0" y2="1"><stop stop-color="#e5bf85"/><stop offset="1" stop-color="#ba8a61"/></linearGradient>
+ <linearGradient id="ceramic" x2="0" y2="1"><stop stop-color="#d2d1af"/><stop offset="1" stop-color="#939b7c"/></linearGradient>
+ <marker id="arrow" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="5" markerHeight="5" orient="auto"><path d="M2 2L9 6 2 10" fill="none" stroke="#85644d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
+</defs><symbol id="pot" viewBox="0 0 160 160">
+ <path d="M23 71v25q2 26 24 32q31 8 65 0q22-5 24-32V71" fill="#959778" stroke="#616b54" stroke-width="2.4"/>
+ <path d="M26 79Q12 72 12 82Q11 92 27 92M134 79Q148 74 149 82Q151 93 134 92" fill="#b0aa88" stroke="#616b54" stroke-width="2.6"/>
+ <path d="M25 71q8-22 55-23q46 0 58 23q-4 8-59 8q-48 0-54-8Z" fill="#bdbc9a" stroke="#616b54" stroke-width="2.4"/>
+ <path d="M69 47q-3-12 12-12q15 0 12 12" fill="#8f8066" stroke="#616b54" stroke-width="2.3"/>
+ <path d="M37 88v9q3 17 15 21" fill="none" stroke="#cfd0ae" stroke-width="3.5" opacity=".68"/>
+</symbol><g filter="url(#wash)"><ellipse cx="240" cy="209" rx="140" ry="102" fill="#e7d3ad" opacity="0.45"/><use href="#pot" x="117" y="14" width="248" height="248" transform="rotate(-4 241.0 138.0)"/></g></svg>

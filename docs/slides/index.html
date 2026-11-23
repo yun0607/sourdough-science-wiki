@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="用 12 頁插畫循序認識酸種、養種與第一爐麵包。">
-  <title>酸種麵包的科學：從一罐酵母到一顆麵包</title>
+  <meta name="description" content="16 頁圖解，從認識酸種到實際做一爐酸種麵包。">
+  <title>酸種麵包的科學：從一罐酸種開始</title>
   <link rel="icon" href="data:,">
   <link rel="stylesheet" href="./slides.css">
   <script src="./slides.js" defer></script>
@@ -15,228 +15,369 @@
     <a class="wiki-link" href="../index.html">回到 Wiki</a>
   </header>
   <main class="book">
-    <nav class="chapters" aria-label="章節進度"><a href="#slide-2">認識酸種</a><a href="#slide-4">養種與觀察</a><a href="#slide-8">製作與判讀</a><a href="#slide-12">複習與查證</a></nav>
+    <nav class="chapters" aria-label="章節進度"><a href="#slide-1">認識酸種</a><a href="#slide-5">養種與觀察</a><a href="#slide-9">發酵條件</a><a href="#slide-11">動手做麵包</a><a href="#slide-14">排查與回顧</a></nav>
     <div class="deck" id="deck">
-    <article class="slide cover" id="slide-1" data-chapter="開始閱讀" aria-labelledby="title-1" tabindex="-1">
-      <div class="slide-display">
+      <article class="slide cover" id="slide-1" aria-labelledby="title-1" tabindex="-1">
         <header class="slide-heading">
-          <h1 id="title-1">酸種麵包的科學</h1>
-          <p>從一罐酵母到一顆麵包</p>
+          <h1 id="title-1">從一罐酸種開始</h1>
+          <p class="takeaway" data-claim="01.1">酸種是一罐粉、水與微生物，先學會觀察它，再用它做麵包。</p>
         </header>
-        <figure class="artwork">
-          <img width="480" height="390" src="./assets/lesson-01.svg" alt="玻璃罐、麥穗與一顆切開的酸種麵包。">
-          
-        </figure>
-      </div>
-      <div class="lesson">
-        <div class="lesson-points"><div class="lesson-point" data-claim="01.1"><h3>這罐是什麼？</h3><p>麵粉、水和其中生長的微生物組成酸種。</p></div> <div class="lesson-point" data-claim="01.2"><h3>這堂課要走到哪？</h3><p>從養種、觀察體積，到備好酵頭、發酵、整形和烘烤。</p></div></div>
+        <div class="diagram" role="group" aria-label="從一罐酸種開始圖解"><div class="diagram-panel" data-claim="01.2">
+          <img src="./assets/lesson-cover.svg" width="480" height="390" alt="" decoding="async">
+          <h3>這罐叫酸種</h3>
+          <p class="diagram-note">麵粉加水後，微生物會在裡面生長。</p>
+        </div></div>
         
-      </div>
-      <nav class="citations" aria-label="第 1 頁來源"><span class="source-label">Wiki 證據</span> <span><a href="../index.html#W001">W001</a> · <a href="../index.html#ref-SRC-001">SRC-001</a></span> <span><a href="../index.html#W005">W005</a> · <a href="../index.html#ref-SRC-007">SRC-007</a></span> <span><a href="../index.html#W004">W004</a> · <a href="../index.html#ref-SRC-004">SRC-004</a></span></nav>
-    </article>
-    <article class="slide" id="slide-2" data-chapter="認識酸種" aria-labelledby="title-2" tabindex="-1">
-      <div class="slide-display">
-        <header class="slide-heading">
-          <h2 id="title-2">酸種麵包是什麼？</h2>
-          <p>酸種麵包的起點是一罐酸種</p>
-        </header>
-        <figure class="artwork">
-          <img width="480" height="390" src="./assets/lesson-02.svg" alt="用手繪箭頭連起麵粉、水、酸種罐和麵包。">
-          
-        </figure>
-      </div>
-      <div class="lesson">
-        <div class="lesson-points"><div class="lesson-point" data-claim="02.1"><h3>罐裡有什麼</h3><p>酸種也叫酸種酵頭，是麵粉、水和其中生長的微生物。</p></div> <div class="lesson-point" data-claim="02.2"><h3>發酵在做什麼</h3><p>微生物利用麵粉中的糖等養分，產生二氧化碳及有機酸等物質。</p></div></div>
         
-      </div>
-      <nav class="citations" aria-label="第 2 頁來源"><span class="source-label">Wiki 證據</span> <span><a href="../index.html#W001">W001</a> · <a href="../index.html#ref-SRC-001">SRC-001</a></span></nav>
-    </article>
-    <article class="slide" id="slide-3" data-chapter="認識酸種" aria-labelledby="title-3" tabindex="-1">
-      <div class="slide-display">
-        <header class="slide-heading">
-          <h2 id="title-3">酵母菌與乳酸菌如何合作？</h2>
-          <p>一邊幫助膨脹，一邊影響酸味</p>
-        </header>
-        <figure class="artwork">
-          <img width="480" height="390" src="./assets/lesson-03.svg" alt="示意圖分成酵母與氣泡，以及乳酸菌與酸兩條路徑。">
-          <figcaption>上：二氧化碳氣泡　下：有機酸</figcaption>
-        </figure>
-      </div>
-      <div class="lesson">
-        <div class="lesson-points"><div class="lesson-point" data-claim="03.1"><h3>酵母菌和氣泡</h3><p>酵母是單細胞真菌。它產生二氧化碳，氣體留在麵糰裡，幫助麵糰膨脹。</p></div> <div class="lesson-point" data-claim="03.2"><h3>乳酸菌和風味</h3><p>乳酸菌能產生乳酸。有些也產生其他有機酸，酸的種類與多寡會影響風味。</p></div></div>
         
-      </div>
-      <nav class="citations" aria-label="第 3 頁來源"><span class="source-label">Wiki 證據</span> <span><a href="../index.html#W001">W001</a> · <a href="../index.html#ref-SRC-001">SRC-001</a></span></nav>
-    </article>
-    <article class="slide" id="slide-4" data-chapter="養種與觀察" aria-labelledby="title-4" tabindex="-1">
-      <div class="slide-display">
+        <nav class="citations" aria-label="第 1 頁來源"><span class="source-label">Wiki 來源</span> <span><a href="../index.html#W001">W001</a> · <a href="../index.html#ref-SRC-001">SRC-001</a></span></nav>
+      </article>
+      <article class="slide compare" id="slide-2" aria-labelledby="title-2" tabindex="-1">
         <header class="slide-heading">
-          <h2 id="title-4">酸種如何從麵粉和水開始？</h2>
-          <p>粉水混合物裡，微生物會隨時間改變</p>
+          <h2 id="title-2">兩款白小麥麵包，試驗怎麼比？</h2>
+          <p class="takeaway" data-claim="02.1">以 Wiki 裡的一項白小麥麵包試驗為例，先看兩款配方用什麼發酵。</p>
         </header>
-        <figure class="artwork">
-          <img width="480" height="390" src="./assets/lesson-04.svg" alt="麵粉、水和兩罐酸種。不同形狀與顏色用來示意菌群變化。">
-          <figcaption>示意圖</figcaption>
-        </figure>
-      </div>
-      <div class="lesson">
-        <div class="lesson-points"><div class="lesson-point" data-claim="04.1"><h3>麵粉提供養分</h3><p>不同麵粉提供的養分不同，也可能帶入不同微生物。水和粉的比例會影響微生物活動。</p></div> <div class="lesson-point" data-claim="04.2"><h3>早期和後期不一樣</h3><p>室溫下每日餵養的 14 天實驗裡，早期常見與麵粉或植物相關的細菌，後期較常見能適應酸性環境的細菌。不同麵粉組的細菌組成與氣味仍有差異。</p></div></div>
+        <div class="diagram" role="group" aria-label="兩款白小麥麵包，試驗怎麼比？圖解"><div class="diagram-panel" data-claim="02.2">
+          <img src="./assets/lesson-jar.svg" width="480" height="390" alt="" decoding="async">
+          <h3>白小麥酸種麵包</h3>
+          <p class="diagram-note">用含有酵母與細菌的酸種。</p>
+        </div><div class="diagram-panel" data-claim="02.3">
+          <img src="./assets/lesson-yeast.svg" width="480" height="390" alt="" decoding="async">
+          <h3>白小麥酵母麵包</h3>
+          <p class="diagram-note">用酵母。這款是試驗中的對照麵包。</p>
+        </div></div>
+        <p class="practice" data-claim="02.4">這裡先認識試驗中的兩種配方。第 15 頁再看健康證據。</p>
         
-      </div>
-      <nav class="citations" aria-label="第 4 頁來源"><span class="source-label">Wiki 證據</span> <span><a href="../index.html#W002">W002</a> · <a href="../index.html#ref-SRC-001">SRC-001</a></span> <span><a href="../index.html#W005">W005</a> · <a href="../index.html#ref-SRC-002">SRC-002</a></span></nav>
-    </article>
-    <article class="slide" id="slide-5" data-chapter="養種與觀察" aria-labelledby="title-5" tabindex="-1">
-      <div class="slide-display">
-        <header class="slide-heading">
-          <h2 id="title-5">如何培養與餵養酸種？</h2>
-          <p>留下部分舊酸種，再補進粉和水</p>
-        </header>
-        <figure class="artwork">
-          <img width="480" height="390" src="./assets/lesson-05.svg" alt="以罐子、粉、水和秤示意等重餵養，以雪花示意冷藏保養。">
-          
-        </figure>
-      </div>
-      <div class="lesson">
-        <div class="lesson-points"><div class="lesson-point" data-claim="05.1"><h3>剛開始養｜等重餵養例</h3><p>先取出部分舊酸種並秤重留下的部分。新粉和水各秤出與留下的舊酸種相同的重量，再拌勻。</p></div> <div class="lesson-point" data-claim="05.2"><h3>已有冷藏酸種｜保養例</h3><p>依這份指南，先鬆蓋，在室溫放約 1–2 小時。分份補粉水，待留罐的酸種漲到約兩倍、回落至原來高度再冷藏。</p></div></div>
         
-      </div>
-      <nav class="citations" aria-label="第 5 頁來源"><span class="source-label">Wiki 證據</span> <span><a href="../index.html#W005">W005</a> · <a href="../index.html#ref-SRC-007">SRC-007</a></span> <span><a href="../index.html#W003">W003</a> · <a href="../index.html#ref-SRC-004">SRC-004</a></span></nav>
-    </article>
-    <article class="slide" id="slide-6" data-chapter="養種與觀察" aria-labelledby="title-6" tabindex="-1">
-      <div class="slide-display">
+        <nav class="citations" aria-label="第 2 頁來源"><span class="source-label">Wiki 來源</span> <span><a href="../index.html#W001">W001</a> · <a href="../index.html#ref-SRC-001">SRC-001</a></span> <span><a href="../index.html#W008">W008</a> · <a href="../index.html#ref-SRC-006">SRC-006</a></span></nav>
+      </article>
+      <article class="slide chain" id="slide-3" aria-labelledby="title-3" tabindex="-1">
         <header class="slide-heading">
-          <h2 id="title-6">麵粉、溫度與時間如何影響發酵？</h2>
-          <p>把條件記下來，才容易比較兩次變化</p>
+          <h2 id="title-3">麵粉加水，為什麼會發酵？</h2>
+          <p class="takeaway" data-claim="03.1">微生物利用麵粉裡的糖等養分，發酵就會產生氣體和酸。</p>
         </header>
-        <figure class="artwork">
-          <img width="480" height="390" src="./assets/lesson-06.svg" alt="麵粉、水滴、溫度計和時鐘組成四格廚房筆記。">
-          
-        </figure>
-      </div>
-      <div class="lesson">
-        <div class="lesson-points"><div class="lesson-point" data-claim="06.1"><h3>麵粉與水</h3><p>換粉會改變酸種可用的養分。記下所用麵粉和水對粉的重量比例。</p></div> <div class="lesson-point" data-claim="06.2"><h3>溫度與餵養間隔</h3><p>溫度會影響微生物的生長、產氣與產酸。兩次餵養隔多久，也會改變這段發酵時間。</p></div> <div class="lesson-point" data-claim="06.3"><h3>比較時的限制</h3><p>多種條件一起變動時，很難把觀察到的差異歸到其中一項。</p></div></div>
+        <div class="diagram" role="group" aria-label="麵粉加水，為什麼會發酵？圖解"><div class="diagram-panel" data-claim="03.2">
+          <img src="./assets/lesson-ingredients.svg" width="480" height="390" alt="" decoding="async">
+          <h3>① 混合麵粉和水</h3>
+          <p class="diagram-note">麵粉與周遭環境會帶來微生物。</p>
+        </div><div class="diagram-panel" data-claim="03.3">
+          <img src="./assets/lesson-yeast.svg" width="480" height="390" alt="" decoding="async">
+          <h3>② 微生物利用養分</h3>
+          <p class="diagram-note">糖等養分成為微生物的食物。</p>
+        </div><div class="diagram-panel" data-claim="03.4">
+          <img src="./assets/lesson-products.svg" width="480" height="390" alt="" decoding="async">
+          <h3>③ 產生氣體與酸</h3>
+          <p class="diagram-note">包括二氧化碳及有機酸。</p>
+        </div></div>
         
-      </div>
-      <nav class="citations" aria-label="第 6 頁來源"><span class="source-label">Wiki 證據</span> <span><a href="../index.html#W002">W002</a> · <a href="../index.html#ref-SRC-001">SRC-001</a></span></nav>
-    </article>
-    <article class="slide" id="slide-7" data-chapter="養種與觀察" aria-labelledby="title-7" tabindex="-1">
-      <div class="slide-display">
-        <header class="slide-heading">
-          <h2 id="title-7">為什麼每罐酸種的風味與活性不同？</h2>
-          <p>菌群組成和氣味、膨脹表現有關</p>
-        </header>
-        <figure class="artwork">
-          <img width="480" height="390" src="./assets/lesson-07.svg" alt="兩罐酸種以不同的氣味線條與液面示意差異，並非實驗測量圖。">
-          <figcaption>示意圖</figcaption>
-        </figure>
-      </div>
-      <div class="lesson">
-        <div class="lesson-points"><div class="lesson-point" data-claim="07.1"><h3>研究怎麼比較</h3><p>研究者從募集的 500 份酸種中選出 40 份，在相同條件下，比較麵糰膨脹速度和與氣味有關的物質。</p></div> <div class="lesson-point" data-claim="07.2"><h3>看見了什麼關聯</h3><p>醋酸菌是一群會產生醋酸的細菌。它占比較高的樣本傾向漲得較慢，比例也與部分氣味表現有關。這個關聯並非每份樣本都出現。</p></div></div>
         
-      </div>
-      <nav class="citations" aria-label="第 7 頁來源"><span class="source-label">Wiki 證據</span> <span><a href="../index.html#W006">W006</a> · <a href="../index.html#ref-SRC-003">SRC-003</a></span></nav>
-    </article>
-    <article class="slide process" id="slide-8" data-chapter="製作與判讀" aria-labelledby="title-8" tabindex="-1">
-      <div class="slide-display">
-        <header class="slide-heading">
-          <h2 id="title-8">從酸種到麵包的製作流程</h2>
-          <p>看懂六個階段，再照完整配方操作</p>
-        </header>
-        <figure class="artwork">
-          <img width="480" height="390" src="./assets/lesson-08.svg" alt="六格示意依序呈現酵頭、拌揉、第一次發酵、整形、最後發酵、出爐冷卻。">
-          
-        </figure>
-      </div>
-      <div class="lesson">
-        <div class="lesson-points"><div class="lesson-point" data-claim="08.1"><h3>① 備酵頭</h3><p>從已建立的酸種取一份另餵。這份要拌進主麵糰的糊叫酵頭，室溫漲到約兩倍時使用。</p></div> <div class="lesson-point" data-claim="08.2"><h3>② 拌揉</h3><p>加入水、麵粉和鹽，揉至柔軟。</p></div> <div class="lesson-point" data-claim="08.3"><h3>③ 第一次發酵</h3><p>室溫等麵糰體積約翻倍。</p></div> <div class="lesson-point" data-claim="08.4"><h3>④ 整形</h3><p>分兩等份，將邊緣收到下方。</p></div> <div class="lesson-point" data-claim="08.5"><h3>⑤ 最後發酵</h3><p>蓋好，再等體積約翻倍。</p></div> <div class="lesson-point" data-claim="08.6"><h3>⑥ 烘烤冷卻</h3><p>用預熱的有蓋鑄鐵鍋烤，再移上網架冷卻。</p></div></div>
-        <a class="text-link" href="../index.html#W004">查看用量與有蓋鑄鐵鍋配方</a>
-      </div>
-      <nav class="citations" aria-label="第 8 頁來源"><span class="source-label">Wiki 證據</span> <span><a href="../index.html#W004">W004</a> · <a href="../index.html#ref-SRC-004">SRC-004</a></span></nav>
-    </article>
-    <article class="slide" id="slide-9" data-chapter="製作與判讀" aria-labelledby="title-9" tabindex="-1">
-      <div class="slide-display">
-        <header class="slide-heading">
-          <h2 id="title-9">如何觀察酸種發酵過程？</h2>
-          <p>看多次餵養後的變化</p>
-        </header>
-        <figure class="artwork">
-          <img width="480" height="390" src="./assets/lesson-09.svg" alt="三個玻璃罐依序示意餵後起始、漲高、有時回落。圖無時間刻度。">
-          <figcaption>示意圖</figcaption>
-        </figure>
-      </div>
-      <div class="lesson">
-        <div class="lesson-points"><div class="lesson-point" data-claim="09.1"><h3>餵完先做記號</h3><p>記下起始高度，下次比較體積才有基準。留意氣泡、體積，以及漲高之後是否回落。</p></div> <div class="lesson-point" data-claim="09.2"><h3>早期先漲再停也可能發生</h3><p>實驗記錄到早期酸種漲高後可能暫時停滯或回落。一次漲高無法辨認是什麼微生物造成。</p></div></div>
         
-      </div>
-      <nav class="citations" aria-label="第 9 頁來源"><span class="source-label">Wiki 證據</span> <span><a href="../index.html#W005">W005</a> · <a href="../index.html#ref-SRC-002">SRC-002</a> <a href="../index.html#ref-SRC-007">SRC-007</a></span></nav>
-    </article>
-    <article class="slide" id="slide-10" data-chapter="製作與判讀" aria-labelledby="title-10" tabindex="-1">
-      <div class="slide-display">
+        <nav class="citations" aria-label="第 3 頁來源"><span class="source-label">Wiki 來源</span> <span><a href="../index.html#W001">W001</a> · <a href="../index.html#ref-SRC-001">SRC-001</a></span></nav>
+      </article>
+      <article class="slide channels" id="slide-4" aria-labelledby="title-4" tabindex="-1">
         <header class="slide-heading">
-          <h2 id="title-10">常見問題與食品安全</h2>
-          <p>發酵慢與明顯發黴，要分開處理</p>
+          <h2 id="title-4">酵母菌與乳酸菌做什麼？</h2>
+          <p class="takeaway" data-claim="04.1">用兩條線索理解發酵：氣體幫助膨脹，酸影響風味。</p>
         </header>
-        <figure class="artwork">
-          <img width="480" height="390" src="./assets/lesson-10.svg" alt="筆記和時鐘代表追蹤發酵。容器與清潔用品代表清理。">
-          
-        </figure>
-      </div>
-      <div class="lesson">
-        <div class="lesson-points"><div class="lesson-point" data-claim="10.1"><h3>漲得慢</h3><p>回頭查室溫、用粉和餵養間隔。可記下換粉、補水和餵養的變動。</p></div> <div class="lesson-point" data-claim="10.2"><h3>明顯發黴</h3><p>丟掉容器裡的全部酸種，徹底洗淨並沖洗容器再重新開始。</p></div> <div class="lesson-point" data-claim="10.3"><h3>生酸種避免試吃</h3><p>看氣泡和體積、聞氣味，只能用於追蹤活性。酸種烘烤前避免試吃。</p></div></div>
+        <div class="diagram" role="group" aria-label="酵母菌與乳酸菌做什麼？圖解"><div class="diagram-panel" data-claim="04.2">
+          <img src="./assets/lesson-gas.svg" width="480" height="390" alt="" decoding="async">
+          <h3>酵母菌 → 二氧化碳</h3>
+          <p class="diagram-note">氣體留在麵糰裡，幫助麵糰漲大。</p>
+        </div><div class="diagram-panel" data-claim="04.3">
+          <img src="./assets/lesson-acid.svg" width="480" height="390" alt="" decoding="async">
+          <h3>乳酸菌 → 乳酸</h3>
+          <p class="diagram-note">乳酸等有機酸會影響風味。</p>
+        </div></div>
         
-      </div>
-      <nav class="citations" aria-label="第 10 頁來源"><span class="source-label">Wiki 證據</span> <span><a href="../index.html#W007">W007</a> · <a href="../index.html#ref-SRC-005">SRC-005</a> <a href="../index.html#ref-SRC-007">SRC-007</a></span></nav>
-    </article>
-    <article class="slide" id="slide-11" data-chapter="製作與判讀" aria-labelledby="title-11" tabindex="-1">
-      <div class="slide-display">
-        <header class="slide-heading">
-          <h2 id="title-11">酸種麵包真的比較健康嗎？</h2>
-          <p>先看比較條件，再讀研究結果</p>
-        </header>
-        <figure class="artwork">
-          <img width="480" height="390" src="./assets/lesson-11.svg" alt="兩片麵包放在秤的兩側，旁邊用筆記示意比較條件。">
-          <figcaption>示意圖</figcaption>
-        </figure>
-      </div>
-      <div class="lesson">
-        <div class="lesson-points"><div class="lesson-point" data-claim="11.1"><h3>血糖結果不一致</h3><p>部分成人試驗觀察到較低的餐後血糖反應，有些比不出明確差異。一起看用粉、製程及對照麵包。現有證據仍無法確定單靠酸種發酵就有臨床健康效益。</p></div> <div class="lesson-point" data-claim="11.2"><h3>麩質要看原料</h3><p>用含麩質麵粉做的一般酸種麵包仍含麩質。乳糜瀉患者應避開這類麵包。</p></div></div>
         
-      </div>
-      <nav class="citations" aria-label="第 11 頁來源"><span class="source-label">Wiki 證據</span> <span><a href="../index.html#W008">W008</a> · <a href="../index.html#ref-SRC-006">SRC-006</a> <a href="../index.html#ref-SRC-007">SRC-007</a></span></nav>
-    </article>
-    <article class="slide review" id="slide-12" data-chapter="複習與查證" aria-labelledby="title-12" tabindex="-1">
-      <div class="slide-display">
+        
+        <nav class="citations" aria-label="第 4 頁來源"><span class="source-label">Wiki 來源</span> <span><a href="../index.html#W001">W001</a> · <a href="../index.html#ref-SRC-001">SRC-001</a></span></nav>
+      </article>
+      <article class="slide workbench" id="slide-5" aria-labelledby="title-5" tabindex="-1">
         <header class="slide-heading">
-          <h2 id="title-12">重點整理與小測驗</h2>
-          <p>回想罐子裡的變化</p>
+          <h2 id="title-5">養酸種前，先準備什麼？</h2>
+          <p class="takeaway" data-claim="05.1">準備乾淨的工作區，以及能記錄餵養的工具。</p>
         </header>
-        <figure class="artwork">
-          <img width="480" height="390" src="./assets/lesson-12.svg" alt="筆記本與酸種罐，提示用紀錄回顧膨脹和回落。">
-          
-        </figure>
-      </div>
-      <div class="lesson">
-        <div class="lesson-points"><div class="lesson-point" data-claim="12.1"><h3>重點｜氣泡與風味</h3><p>酵母產生的氣體有助於膨脹，乳酸菌產生的酸會影響風味。</p></div> <div class="lesson-point" data-claim="12.2"><h3>重點｜看多次觀察</h3><p>記下餵養後的起始高度，多次觀察氣泡和體積變化。</p></div> <details class="quiz" data-claim="12.3"><summary>剛餵好時要記下什麼，才能比較下一次漲高？</summary><p>起始高度。之後可以回頭比較漲高與回落的情形。</p></details></div>
-        <div class="review-links">
-            <a class="text-link" href="../index.html#references" id="reference-link">參考來源</a>
-            <a class="text-link" href="../index.html">返回 Wiki</a>
-        </div>
-      </div>
-      <nav class="citations" aria-label="第 12 頁來源"><span class="source-label">Wiki 證據</span> <span><a href="../index.html#W001">W001</a> · <a href="../index.html#ref-SRC-001">SRC-001</a></span> <span><a href="../index.html#W005">W005</a> · <a href="../index.html#ref-SRC-007">SRC-007</a></span></nav>
-    </article>
+        <div class="diagram" role="group" aria-label="養酸種前，先準備什麼？圖解"><div class="diagram-panel" data-claim="05.2">
+          <img src="./assets/lesson-wash-jar.svg" width="480" height="390" alt="" decoding="async">
+          <h3>容器和器具</h3>
+          <p class="diagram-note">先洗手，清潔容器、器具及工作檯。</p>
+        </div><div class="diagram-panel" data-claim="05.3">
+          <img src="./assets/lesson-ingredients.svg" width="480" height="390" alt="" decoding="async">
+          <h3>麵粉和水</h3>
+          <p class="diagram-note">自發酸種從粉水混合開始。</p>
+        </div><div class="diagram-panel" data-claim="05.4">
+          <img src="./assets/lesson-weigh-notes.svg" width="480" height="390" alt="" decoding="async">
+          <h3>廚房秤和筆記</h3>
+          <p class="diagram-note">秤用於等重餵養，筆記用來記下起始高度。</p>
+        </div></div>
+        <p class="practice" data-claim="05.5">室溫發酵時鬆蓋。</p>
+        
+        
+        <nav class="citations" aria-label="第 5 頁來源"><span class="source-label">Wiki 來源</span> <span><a href="../index.html#W007">W007</a> · <a href="../index.html#ref-SRC-005">SRC-005</a> <a href="../index.html#ref-SRC-007">SRC-007</a></span> <span><a href="../index.html#W001">W001</a> · <a href="../index.html#ref-SRC-001">SRC-001</a></span> <span><a href="../index.html#W005">W005</a> · <a href="../index.html#ref-SRC-007">SRC-007</a></span></nav>
+      </article>
+      <article class="slide timeline" id="slide-6" aria-labelledby="title-6" tabindex="-1">
+        <header class="slide-heading">
+          <h2 id="title-6">新酸種先漲又停，怎麼看？</h2>
+          <p class="takeaway" data-claim="06.1">初養早期可能先漲高，再暫時停滯或回落。</p>
+        </header>
+        <div class="diagram" role="group" aria-label="新酸種先漲又停，怎麼看？圖解"><div class="diagram-panel" data-claim="06.2">
+          <img src="./assets/lesson-rise.svg" width="480" height="390" alt="" decoding="async">
+          <h3>早期漲高</h3>
+          <p class="diagram-note">實驗記錄到早期膨脹。</p>
+        </div><div class="diagram-panel" data-claim="06.3">
+          <img src="./assets/lesson-settle.svg" width="480" height="390" alt="" decoding="async">
+          <h3>短暫回落或停滯</h3>
+          <p class="diagram-note">一次漲高無法辨認是哪種微生物造成。</p>
+        </div><div class="diagram-panel" data-claim="06.4">
+          <img src="./assets/lesson-bacteria.svg" width="480" height="390" alt="" decoding="async">
+          <h3>後期菌群改變</h3>
+          <p class="diagram-note">實驗後期較常見耐酸的細菌。</p>
+        </div></div>
+        <p class="practice" data-claim="06.5">圖是室溫每日餵養、追蹤 14 天的實驗示意。這是該批樣本的觀察期。家中養種可觀察每罐的變化。</p>
+        
+        
+        <nav class="citations" aria-label="第 6 頁來源"><span class="source-label">Wiki 來源</span> <span><a href="../index.html#W005">W005</a> · <a href="../index.html#ref-SRC-002">SRC-002</a> <a href="../index.html#ref-SRC-007">SRC-007</a></span></nav>
+      </article>
+      <article class="slide flow" id="slide-7" aria-labelledby="title-7" tabindex="-1">
+        <header class="slide-heading">
+          <h2 id="title-7">餵養酸種，先留多少？</h2>
+          <p class="takeaway" data-claim="07.1">等重餵養例：先秤留下的酸種，再補同樣重量的粉和水。</p>
+        </header>
+        <div class="diagram" role="group" aria-label="餵養酸種，先留多少？圖解"><div class="diagram-panel" data-claim="07.2">
+          <img src="./assets/lesson-jar.svg" width="480" height="390" alt="" decoding="async">
+          <h3>① 先取出一部分</h3>
+          <p class="diagram-note">把要繼續養的舊酸種留在罐裡。</p>
+        </div><div class="diagram-panel" data-claim="07.3">
+          <img src="./assets/lesson-scale.svg" width="480" height="390" alt="" decoding="async">
+          <h3>② 秤留下的重量</h3>
+          <p class="diagram-note">粉和水各秤出同樣重量。</p>
+        </div><div class="diagram-panel" data-claim="07.4">
+          <img src="./assets/lesson-bowl.svg" width="480" height="390" alt="" decoding="async">
+          <h3>③ 加入並拌勻</h3>
+          <p class="diagram-note">餵完記下起始高度。</p>
+        </div></div>
+        <p class="practice" data-claim="07.5">若手上是已養好的冷藏酸種，可另看 W003 的冷藏保養流程。</p>
+        
+        
+        <nav class="citations" aria-label="第 7 頁來源"><span class="source-label">Wiki 來源</span> <span><a href="../index.html#W005">W005</a> · <a href="../index.html#ref-SRC-007">SRC-007</a></span> <span><a href="../index.html#W003">W003</a> · <a href="../index.html#ref-SRC-004">SRC-004</a></span></nav>
+      </article>
+      <article class="slide observe" id="slide-8" aria-labelledby="title-8" tabindex="-1">
+        <header class="slide-heading">
+          <h2 id="title-8">怎麼看酸種有沒有活動？</h2>
+          <p class="takeaway" data-claim="08.1">每次餵完先標記高度，再比較氣泡、漲高與回落。</p>
+        </header>
+        <div class="diagram" role="group" aria-label="三個罐子的橫線代表同一個起始高度"><div class="diagram-panel" data-claim="08.2">
+          <img src="./assets/lesson-mark-start.svg" width="480" height="390" alt="" decoding="async">
+          <h3>剛餵完</h3>
+          <p class="diagram-note">記下起始高度。</p>
+        </div><div class="diagram-panel" data-claim="08.3">
+          <img src="./assets/lesson-mark-rise.svg" width="480" height="390" alt="" decoding="async">
+          <h3>漲高時</h3>
+          <p class="diagram-note">從罐側看高度和氣泡。</p>
+        </div><div class="diagram-panel" data-claim="08.4">
+          <img src="./assets/lesson-mark-settle.svg" width="480" height="390" alt="" decoding="async">
+          <h3>之後回落時</h3>
+          <p class="diagram-note">把變化和前幾次的紀錄一起看。</p>
+        </div></div>
+        
+        
+        
+        <nav class="citations" aria-label="第 8 頁來源"><span class="source-label">Wiki 來源</span> <span><a href="../index.html#W005">W005</a> · <a href="../index.html#ref-SRC-007">SRC-007</a></span></nav>
+      </article>
+      <article class="slide factors" id="slide-9" aria-labelledby="title-9" tabindex="-1">
+        <header class="slide-heading">
+          <h2 id="title-9">同一罐，為什麼有時漲得慢？</h2>
+          <p class="takeaway" data-claim="09.1">先看配方和餵養條件，才容易比較兩次發酵。</p>
+        </header>
+        <div class="diagram" role="group" aria-label="同一罐，為什麼有時漲得慢？圖解"><div class="diagram-panel" data-claim="09.2">
+          <img src="./assets/lesson-flour.svg" width="480" height="390" alt="" decoding="async">
+          <h3>麵粉</h3>
+          <p class="diagram-note">不同粉提供的養分可能不同。</p>
+        </div><div class="diagram-panel" data-claim="09.3">
+          <img src="./assets/lesson-drop.svg" width="480" height="390" alt="" decoding="async">
+          <h3>水量</h3>
+          <p class="diagram-note">用「水重對粉重」記粉水比例。</p>
+        </div><div class="diagram-panel" data-claim="09.4">
+          <img src="./assets/lesson-therm.svg" width="480" height="390" alt="" decoding="async">
+          <h3>溫度與餵養間隔</h3>
+          <p class="diagram-note">溫度影響生長與產氣，間隔會改變發酵時間。</p>
+        </div></div>
+        <p class="practice" data-claim="09.5">同一試驗的條件下，不同酸種的膨脹速度和氣味表現也可不同。</p>
+        
+        
+        <nav class="citations" aria-label="第 9 頁來源"><span class="source-label">Wiki 來源</span> <span><a href="../index.html#W002">W002</a> · <a href="../index.html#ref-SRC-001">SRC-001</a></span> <span><a href="../index.html#W006">W006</a> · <a href="../index.html#ref-SRC-003">SRC-003</a></span></nav>
+      </article>
+      <article class="slide fork" id="slide-10" aria-labelledby="title-10" tabindex="-1">
+        <header class="slide-heading">
+          <h2 id="title-10">什麼時候可以準備做麵包？</h2>
+          <p class="takeaway" data-claim="10.1">先看酸種是否反覆漲高。做第一爐時，再依配方看另餵的那份。</p>
+        </header>
+        <div class="diagram" role="group" aria-label="什麼時候可以準備做麵包？圖解"><div class="diagram-panel" data-claim="10.2">
+          <img src="./assets/lesson-notes.svg" width="480" height="390" alt="" decoding="async">
+          <h3>若還在觀察新酸種</h3>
+          <p class="diagram-note">比對多次餵養後的膨脹，觀察表現是否逐漸穩定。</p>
+        </div><div class="diagram-panel" data-claim="10.3">
+          <img src="./assets/lesson-rise.svg" width="480" height="390" alt="" decoding="async">
+          <h3>第一爐配方的酵頭</h3>
+          <p class="diagram-note">酵頭是另餵、準備拌進麵糰的那一份。依本配方，室溫漲到約兩倍時使用。</p>
+        </div></div>
+        
+        
+        
+        <nav class="citations" aria-label="第 10 頁來源"><span class="source-label">Wiki 來源</span> <span><a href="../index.html#W005">W005</a> · <a href="../index.html#ref-SRC-007">SRC-007</a></span> <span><a href="../index.html#W004">W004</a> · <a href="../index.html#ref-SRC-004">SRC-004</a></span></nav>
+      </article>
+      <article class="slide roadmap" id="slide-11" aria-labelledby="title-11" tabindex="-1">
+        <header class="slide-heading">
+          <h2 id="title-11">一爐酸種麵包怎麼做？</h2>
+          <p class="takeaway" data-claim="11.1">先看懂三段路線，再用 Wiki 的完整用量操作。</p>
+        </header>
+        <div class="diagram" role="group" aria-label="一爐酸種麵包怎麼做？圖解"><div class="diagram-panel" data-claim="11.2">
+          <img src="./assets/lesson-mix.svg" width="480" height="390" alt="" decoding="async">
+          <h3>① 備酵頭、拌揉</h3>
+          <p class="diagram-note">將餵好的酵頭加水、粉和鹽，揉到柔軟。</p>
+        </div><div class="diagram-panel" data-claim="11.3">
+          <img src="./assets/lesson-shape.svg" width="480" height="390" alt="" decoding="async">
+          <h3>② 發酵、整形</h3>
+          <p class="diagram-note">先等體積變大，再分份整形，接著最後發酵。</p>
+        </div><div class="diagram-panel" data-claim="11.4">
+          <img src="./assets/lesson-bake.svg" width="480" height="390" alt="" decoding="async">
+          <h3>③ 烘烤、冷卻</h3>
+          <p class="diagram-note">本例使用預熱的有蓋鑄鐵鍋，出爐後放網架。</p>
+        </div></div>
+        
+        
+        <div class="slide-links"><a class="lesson-link" href="../index.html#W004">查看完整配方與用量</a></div>
+        <nav class="citations" aria-label="第 11 頁來源"><span class="source-label">Wiki 來源</span> <span><a href="../index.html#W004">W004</a> · <a href="../index.html#ref-SRC-004">SRC-004</a></span></nav>
+      </article>
+      <article class="slide stages" id="slide-12" aria-labelledby="title-12" tabindex="-1">
+        <header class="slide-heading">
+          <h2 id="title-12">兩次發酵中間要做什麼？</h2>
+          <p class="takeaway" data-claim="12.1">第一次發酵後才整形，整形後再做最後發酵。</p>
+        </header>
+        <div class="diagram" role="group" aria-label="兩次發酵中間要做什麼？圖解"><div class="diagram-panel" data-claim="12.2">
+          <img src="./assets/lesson-dough.svg" width="480" height="390" alt="" decoding="async">
+          <h3>① 先讓麵糰漲高</h3>
+          <p class="diagram-note">這個室溫配方等體積約翻倍。</p>
+        </div><div class="diagram-panel" data-claim="12.3">
+          <img src="./assets/lesson-shape.svg" width="480" height="390" alt="" decoding="async">
+          <h3>② 分份並整形</h3>
+          <p class="diagram-note">分成兩等份，把邊緣收到麵糰底下。</p>
+        </div><div class="diagram-panel" data-claim="12.4">
+          <img src="./assets/lesson-covered.svg" width="480" height="390" alt="" decoding="async">
+          <h3>③ 整形後再等</h3>
+          <p class="diagram-note">蓋好，等體積再次約翻倍。</p>
+        </div></div>
+        <p class="practice" data-claim="12.5">原配方提醒，發酵時間會受海拔影響。先看體積。</p>
+        
+        
+        <nav class="citations" aria-label="第 12 頁來源"><span class="source-label">Wiki 來源</span> <span><a href="../index.html#W004">W004</a> · <a href="../index.html#ref-SRC-004">SRC-004</a></span></nav>
+      </article>
+      <article class="slide baking" id="slide-13" aria-labelledby="title-13" tabindex="-1">
+        <header class="slide-heading">
+          <h2 id="title-13">烤到什麼程度才出爐？</h2>
+          <p class="takeaway" data-claim="13.1">這份有蓋鑄鐵鍋配方，用烤色和中心溫度觀察熟度。</p>
+        </header>
+        <div class="diagram" role="group" aria-label="烤到什麼程度才出爐？圖解"><div class="diagram-panel" data-claim="13.2">
+          <img src="./assets/lesson-pot.svg" width="480" height="390" alt="" decoding="async">
+          <h3>預熱後入鍋</h3>
+          <p class="diagram-note">依配方劃口，戴隔熱手套把麵糰移入已預熱的鍋。</p>
+        </div><div class="diagram-panel" data-claim="13.3">
+          <img src="./assets/lesson-check-bread.svg" width="480" height="390" alt="" decoding="async">
+          <h3>看烤色、量中心</h3>
+          <p class="diagram-note">外表金黃至深褐時，用食物溫度計量中心。本配方未達約 88 °C 就繼續烤。</p>
+        </div><div class="diagram-panel" data-claim="13.4">
+          <img src="./assets/lesson-rack.svg" width="480" height="390" alt="" decoding="async">
+          <h3>在網架上放涼</h3>
+          <p class="diagram-note">戴隔熱手套取出，再等麵包完全冷卻才切。</p>
+        </div></div>
+        <p class="practice" data-claim="13.5">這個中心溫度是此配方的熟度指標。</p>
+        
+        
+        <nav class="citations" aria-label="第 13 頁來源"><span class="source-label">Wiki 來源</span> <span><a href="../index.html#W004">W004</a> · <a href="../index.html#ref-SRC-004">SRC-004</a></span></nav>
+      </article>
+      <article class="slide triage" id="slide-14" aria-labelledby="title-14" tabindex="-1">
+        <header class="slide-heading">
+          <h2 id="title-14">漲得慢、發黴，怎麼處理？</h2>
+          <p class="takeaway" data-claim="14.1">漲得慢，查發酵條件。明顯發黴，丟掉全部酸種。</p>
+        </header>
+        <div class="diagram" role="group" aria-label="漲得慢、發黴，怎麼處理？圖解"><div class="diagram-panel" data-claim="14.2">
+          <img src="./assets/lesson-clock.svg" width="480" height="390" alt="" decoding="async">
+          <h3>漲得慢</h3>
+          <p class="diagram-note">回查室溫、麵粉和餵養間隔。</p>
+        </div><div class="diagram-panel" data-claim="14.3">
+          <img src="./assets/lesson-wash-jar.svg" width="480" height="390" alt="" decoding="async">
+          <h3>明顯發黴</h3>
+          <p class="diagram-note">丟掉容器內全部酸種，徹底洗淨並沖洗容器。</p>
+        </div></div>
+        <p class="practice" data-claim="14.4">生酸種避免試吃。氣泡、高度和氣味只用來追蹤發酵活性。</p>
+        
+        
+        <nav class="citations" aria-label="第 14 頁來源"><span class="source-label">Wiki 來源</span> <span><a href="../index.html#W007">W007</a> · <a href="../index.html#ref-SRC-005">SRC-005</a> <a href="../index.html#ref-SRC-007">SRC-007</a></span></nav>
+      </article>
+      <article class="slide compare" id="slide-15" aria-labelledby="title-15" tabindex="-1">
+        <header class="slide-heading">
+          <h2 id="title-15">酸種一定比較健康嗎？</h2>
+          <p class="takeaway" data-claim="15.1">健康證據要看研究怎麼比，麩質則要看使用的原料。</p>
+        </header>
+        <div class="diagram" role="group" aria-label="酸種一定比較健康嗎？圖解"><div class="diagram-panel" data-claim="15.2">
+          <img src="./assets/lesson-comparison.svg" width="480" height="390" alt="" decoding="async">
+          <h3>餐後血糖</h3>
+          <p class="diagram-note">成人試驗結果不一致。要一起看用粉、製程與對照麵包。</p>
+        </div><div class="diagram-panel" data-claim="15.3">
+          <img src="./assets/lesson-flour.svg" width="480" height="390" alt="" decoding="async">
+          <h3>麩質</h3>
+          <p class="diagram-note">含麩質麵粉做的酸種麵包仍含麩質，乳糜瀉患者應避開。</p>
+        </div></div>
+        <p class="practice" data-claim="15.4">現有證據還無法確定單靠酸種發酵就有臨床健康效益。</p>
+        
+        
+        <nav class="citations" aria-label="第 15 頁來源"><span class="source-label">Wiki 來源</span> <span><a href="../index.html#W008">W008</a> · <a href="../index.html#ref-SRC-006">SRC-006</a> <a href="../index.html#ref-SRC-007">SRC-007</a></span></nav>
+      </article>
+      <article class="slide map" id="slide-16" aria-labelledby="title-16" tabindex="-1">
+        <header class="slide-heading">
+          <h2 id="title-16">用一張圖回顧酸種課</h2>
+          <p class="takeaway" data-claim="16.1">下次操作時，從想解決的問題回到對應步驟。</p>
+        </header>
+        <div class="diagram" role="group" aria-label="用一張圖回顧酸種課圖解"><div class="diagram-panel" data-claim="16.2">
+          <img src="./assets/lesson-jar.svg" width="480" height="390" alt="" decoding="async">
+          <h3><a href="#slide-2">認識</a></h3>
+          <p class="diagram-note">粉、水和微生物</p>
+        </div><div class="diagram-panel" data-claim="16.3">
+          <img src="./assets/lesson-scale.svg" width="480" height="390" alt="" decoding="async">
+          <h3><a href="#slide-7">餵養與觀察</a></h3>
+          <p class="diagram-note">補粉水，記起始高度</p>
+        </div><div class="diagram-panel" data-claim="16.4">
+          <img src="./assets/lesson-therm.svg" width="480" height="390" alt="" decoding="async">
+          <h3><a href="#slide-9">發酵條件</a></h3>
+          <p class="diagram-note">記用粉、粉水比例、溫度及餵養間隔</p>
+        </div><div class="diagram-panel" data-claim="16.5">
+          <img src="./assets/lesson-bread.svg" width="480" height="390" alt="" decoding="async">
+          <h3><a href="#slide-11">製作</a></h3>
+          <p class="diagram-note">備酵頭、整形、烘烤</p>
+        </div><div class="diagram-panel" data-claim="16.6">
+          <img src="./assets/lesson-wash-jar.svg" width="480" height="390" alt="" decoding="async">
+          <h3><a href="#slide-14">排查</a></h3>
+          <p class="diagram-note">慢就查條件。明顯發黴時，丟掉全部酸種。</p>
+        </div></div>
+        <p class="practice" data-claim="16.7">健康證據另看用粉、製程和對照麵包。</p>
+        <details class="quiz" data-claim="16.8"><summary>剛餵完，要記下什麼才好比較下一次漲高？</summary><p>起始高度。之後可以比較漲高與回落的情形。</p></details>
+        <div class="slide-links"><a class="lesson-link" href="../index.html#references" id="reference-link">七份參考來源</a> <a class="lesson-link" href="../index.html">返回 Wiki</a></div>
+        <nav class="citations" aria-label="第 16 頁來源"><span class="source-label">Wiki 來源</span> <span><a href="../index.html#W001">W001</a> · <a href="../index.html#ref-SRC-001">SRC-001</a></span> <span><a href="../index.html#W005">W005</a> · <a href="../index.html#ref-SRC-007">SRC-007</a></span> <span><a href="../index.html#W002">W002</a> · <a href="../index.html#ref-SRC-001">SRC-001</a></span> <span><a href="../index.html#W004">W004</a> · <a href="../index.html#ref-SRC-004">SRC-004</a></span> <span><a href="../index.html#W007">W007</a> · <a href="../index.html#ref-SRC-005">SRC-005</a> <a href="../index.html#ref-SRC-007">SRC-007</a></span> <span><a href="../index.html#W008">W008</a> · <a href="../index.html#ref-SRC-006">SRC-006</a></span></nav>
+      </article>
     </div>
     <nav class="pager" aria-label="投影片翻頁" hidden>
       <button type="button" id="previous"><span aria-hidden="true">‹</span> 上一頁</button>
       <div class="page-status">
         <output id="page-number" aria-live="polite"></output>
-        <progress id="reading-progress" max="12" value="1" aria-label="閱讀進度"></progress>
+        <progress id="reading-progress" max="16" value="1" aria-label="閱讀進度"></progress>
       </div>
       <button type="button" id="next">下一頁 <span aria-hidden="true">›</span></button>
     </nav>
     <dialog id="references" aria-labelledby="references-title">
       <form method="dialog"><button type="submit" autofocus>關閉</button></form>
       <h2 id="references-title">參考來源</h2>
-      <ul><li><a href="../index.html#ref-SRC-001">SRC-001</a><p>A review of sourdough starters: ecology, practices, and sensory quality with applications for baking and recommendations for future research</p></li><li><a href="../index.html#ref-SRC-002">SRC-002</a><p>Sourdough starters exhibit similar succession patterns but develop flour-specific climax communities</p></li><li><a href="../index.html#ref-SRC-003">SRC-003</a><p>The diversity and function of sourdough starter microbiomes</p></li><li><a href="../index.html#ref-SRC-004">SRC-004</a><p>Sourdough Basics: Caring for your Starter and Making Bread</p></li><li><a href="../index.html#ref-SRC-005">SRC-005</a><p>Sourdough Starter Best Practices</p></li><li><a href="../index.html#ref-SRC-006">SRC-006</a><p>Nutritional benefits of sourdoughs: A systematic review</p></li><li><a href="../index.html#ref-SRC-007">SRC-007</a><p>Sourdough Bread: 101</p></li></ul>
+      <ul><li><a href="../index.html#ref-SRC-001">SRC-001</a> <span>A review of sourdough starters: ecology, practices, and sensory quality with applications for baking and recommendations for future research</span></li><li><a href="../index.html#ref-SRC-002">SRC-002</a> <span>Sourdough starters exhibit similar succession patterns but develop flour-specific climax communities</span></li><li><a href="../index.html#ref-SRC-003">SRC-003</a> <span>The diversity and function of sourdough starter microbiomes</span></li><li><a href="../index.html#ref-SRC-004">SRC-004</a> <span>Sourdough Basics: Caring for your Starter and Making Bread</span></li><li><a href="../index.html#ref-SRC-005">SRC-005</a> <span>Sourdough Starter Best Practices</span></li><li><a href="../index.html#ref-SRC-006">SRC-006</a> <span>Nutritional benefits of sourdoughs: A systematic review</span></li><li><a href="../index.html#ref-SRC-007">SRC-007</a> <span>Sourdough Bread: 101</span></li></ul>
       <a href="../index.html#references">查閱 Wiki 完整書目</a>
     </dialog>
   </main>
