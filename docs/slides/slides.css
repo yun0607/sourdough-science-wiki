@@ -101,9 +101,10 @@ dialog li p { font-size: .95rem; }
 .slide {
   width: 100%;
   display: grid;
-  align-content: start;
-  gap: 1.25rem;
-  padding: clamp(22px, 3.4cqi, 42px);
+  aspect-ratio: 16 / 9;
+  grid-template-rows: minmax(0, 1fr) 1.65rem;
+  gap: .7rem;
+  padding: clamp(24px, 3.2cqi, 38px);
   border: 1px solid #d6bb98;
   border-radius: 20px;
   background:
@@ -111,6 +112,12 @@ dialog li p { font-size: .95rem; }
     repeating-linear-gradient(120deg, #99755709 0 1px, transparent 1px 5px),
     var(--paper);
   box-shadow: inset 0 0 0 5px #fffdf380, 0 8px 25px #76513d12;
+}
+.slide-content {
+  display: grid;
+  align-content: start;
+  gap: clamp(.65rem, 1.5cqi, 1.15rem);
+  min-width: 0;
 }
 .slide:focus { outline: none; }
 .slide-heading h1, .slide-heading h2 {
@@ -145,7 +152,7 @@ dialog li p { font-size: .95rem; }
   margin-inline: auto;
   max-width: 100%;
   width: auto;
-  height: clamp(98px, 13.6cqi, 154px);
+  height: clamp(76px, calc(22cqi - 130px), 130px);
   object-fit: contain;
 }
 .diagram-panel h3 {
@@ -154,39 +161,44 @@ dialog li p { font-size: .95rem; }
   font: 800 22px/1.35 var(--serif);
   text-wrap: pretty;
 }
-.diagram-note, .practice, .lesson-link { font-size: 22px; line-height: 1.5; overflow-wrap: anywhere; }
+.diagram-note, .practice { font-size: 22px; line-height: 1.5; overflow-wrap: anywhere; }
 .practice {
   border-left: 4px solid var(--wood);
   background: #eadbc15a;
   padding: .6em .83em;
   border-radius: 0 8px 8px 0;
 }
-.slide-links { display: flex; flex-wrap: wrap; gap: .45rem 1.1rem; }
-.lesson-link { font-weight: 750; }
-.citations {
+.slide-footer {
+  display: flex;
+  align-items: baseline;
+  align-content: start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: .15rem .75rem;
+  border-top: 1px solid var(--line);
+  padding-top: .4rem;
+  font-size: .8125rem;
+  line-height: 1.45;
+  color: var(--muted);
+}
+.citations, .footer-links {
   display: flex;
   align-items: baseline;
   flex-wrap: wrap;
-  gap: .22rem .65rem;
-  border-top: 1px solid var(--line);
-  padding-top: .55rem;
-  font-size: .875rem;
-  color: var(--muted);
+  gap: .15rem .55rem;
 }
-.citations a { font-weight: 700; white-space: nowrap; }
+.slide-footer a { font-weight: 700; white-space: nowrap; }
 .source-label { font-weight: 650; }
 
-.cover {
+.cover .slide-content {
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
   align-content: center;
   align-items: center;
-  min-height: 430px;
 }
 .cover .slide-heading { padding-inline: .5rem; }
 .cover .diagram { grid-template-columns: 1fr; }
 .cover .diagram-panel { text-align: center; background: none; border: 0; padding: 0; }
-.cover .diagram-panel img { width: 100%; height: auto; max-height: 380px; }
-.cover .citations { grid-column: 1 / -1; }
+.cover .diagram-panel img { width: 100%; height: auto; max-height: min(30cqi, 340px); }
 
 .compare .diagram, .channels .diagram, .fork .diagram { grid-template-columns: repeat(2, minmax(0,1fr)); }
 .compare .diagram-panel, .channels .diagram-panel, .fork .diagram-panel { padding-inline: 1.45rem; }
@@ -231,11 +243,18 @@ dialog li p { font-size: .95rem; }
 .triage .diagram-panel { display: grid; grid-template-columns: 90px minmax(105px,.28fr) 1fr; align-items: center; gap: .65rem; padding: .3rem .75rem; }
 .triage .diagram-panel img { height: 62px; }
 
-@media (max-width: 900px) {
+@media (width > 1000px) {
+  .oven-setup .diagram-panel img { max-height: 100px; }
+}
+@media (1000px < width <= 1100px) {
+  .slide { padding: 24px; }
+  .slide-content { gap: .7rem; }
+}
+@media (max-width: 1000px) {
   .book-header, .book { width: calc(100% - 24px); }
   .slide-heading h1, .slide-heading h2 { font-size: clamp(28px, 4.8vw, 37px); }
-  .diagram-panel h3, .diagram-note, .practice, .takeaway, .lesson-link { font-size: 19px; }
-  .cover { min-height: 0; }
+  .slide { min-height: 540px; aspect-ratio: 4 / 3; }
+  .diagram-panel h3, .diagram-note, .practice, .takeaway { font-size: 19px; }
   .map .diagram { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 @media (max-width: 610px) {
@@ -243,16 +262,25 @@ dialog li p { font-size: .95rem; }
   .book-header, .book { width: calc(100% - 18px); }
   .chapters { gap: .22rem; }
   .chapters a { padding-inline: .12rem; text-align: center; font-size: .75rem; }
-  .slide { padding: .95rem; border-radius: 13px; gap: .92rem; }
+  .slide {
+    aspect-ratio: auto;
+    height: clamp(590px, calc(1008px - 100cqi), 705px);
+    min-height: 0;
+    grid-template-rows: minmax(0, 1fr) 4.35rem;
+    padding: .85rem;
+    border-radius: 13px;
+    gap: .45rem;
+  }
+  .slide-content { gap: .65rem; }
   .slide-heading h1, .slide-heading h2 { font-size: clamp(28px, 6.8vw, 34px); }
   .takeaway, .practice { font-size: 18px; }
-  .diagram, .cover, .compare .diagram, .channels .diagram, .fork .diagram, .map .diagram { grid-template-columns: minmax(0, 1fr); gap: .66rem; }
+  .diagram, .cover .slide-content, .compare .diagram, .channels .diagram, .fork .diagram, .map .diagram { grid-template-columns: minmax(0, 1fr); gap: .66rem; }
   .diagram-panel, .compare .diagram-panel, .channels .diagram-panel, .fork .diagram-panel, .map .diagram-panel, .triage .diagram-panel {
     display: grid;
-    grid-template-columns: minmax(56px, 22%) minmax(0, 1fr);
+    grid-template-columns: minmax(42px, 17%) minmax(0, 1fr);
     align-content: center;
     column-gap: .55rem;
-    padding: .55rem .68rem;
+    padding: .42rem .52rem;
   }
   .diagram-panel img, .map .diagram-panel img, .triage .diagram-panel img {
     grid-column: 1;
@@ -265,9 +293,8 @@ dialog li p { font-size: .95rem; }
   .diagram-note { grid-column: 2; font-size: 18px; }
   .diagram::before, .diagram::after { display: none !important; }
   .cover .diagram-panel { display: block; text-align: left; padding: 0; }
-  .cover .diagram-panel img { width: min(100%, 315px); height: auto; }
+  .cover .diagram-panel img { width: min(100%, 260px); height: auto; max-height: none; }
   .cover .slide-heading { padding: 0; }
-  .citations { font-size: .8125rem; }
   .pager button { font-size: .875rem; padding-inline: .7em; }
 }
 
@@ -280,18 +307,9 @@ dialog li p { font-size: .95rem; }
 }
 .quiz summary { cursor: pointer; font-weight: 750; }
 .quiz p { padding-top: .4em; }
-@media (max-width: 900px) { .quiz { font-size: 19px; } }
+@media (max-width: 1000px) { .quiz { font-size: 19px; } }
 @media (max-width: 610px) { .quiz { font-size: 18px; } }
 
 .oven-setup .practice {
   background: #efdfc7;
-}
-@media (max-width: 610px) {
-  .oven-setup .diagram-panel {
-    display: block;
-  }
-  .oven-setup .diagram-panel img {
-    width: auto;
-    height: 118px;
-  }
 }
