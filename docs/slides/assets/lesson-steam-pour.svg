@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 390" width="480" height="390">
+  <defs><filter id="wash"><feTurbulence type="fractalNoise" baseFrequency=".047" numOctaves="3" seed="9" result="grain"/><feDisplacementMap in="SourceGraphic" in2="grain" scale="2.8" xChannelSelector="R" yChannelSelector="G"/></filter></defs>
+  <ellipse cx="230" cy="280" rx="176" ry="47" fill="#e5cead" opacity=".55"/>
+  <g filter="url(#wash)" stroke="#76513d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M117 96q-3-40 40-41q38-2 43 41" fill="none" stroke-width="10"/>
+    <path d="M101 98q35-18 89-12q29 5 48 30l34 18l-12 16l-34-9q-7 32-42 36h-51q-40-4-43-33z" fill="#a0a388"/>
+    <path d="M112 99q37-14 71-10" fill="none" stroke="#e4dfbe" stroke-width="5"/>
+    <path d="M274 152q20 24 4 60" fill="none" stroke="#859886" stroke-width="6"/>
+    <path d="M169 252h223l-18 36H188z" fill="#bb8c65"/>
+    <ellipse cx="281" cy="250" rx="111" ry="18" fill="#ecd7b1"/>
+    <path d="M226 250q53-10 110-1" fill="none" stroke="#869883" stroke-width="4"/>
+    <path d="M226 219q-15-13-4-31m98 32q15-17 2-39" fill="none" stroke="#a99a78" stroke-dasharray="4 6"/>
+  </g>
+</svg>

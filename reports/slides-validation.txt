@@ -284,3 +284,24 @@ exit 0
 最終狀態
 - 桌面及手機相對路徑、插畫、上一頁／下一頁、左右方向鍵、直接跳頁、章節定位、進度、測驗展開／收合及來源對話框皆通過。GitHub Pages 子路徑為本機模擬。
 - 核准知識庫、索引與既有 Wiki 網站檔案雜湊均相符。新版完整配方與精確用量連到 W004。較長手機頁可垂直捲動。
+
+第六階段｜從養種到第一爐的連續教學｜2026-11-23（臺灣時間）
+
+改版基準
+- 現行 16 頁簡報及來源對照已備份。依舊版逐頁檢視，第 2 頁先講健康試驗，第 3–4 頁重複介紹微生物，第 5–10 頁分散養種操作，第 13 頁主要按有蓋鑄鐵鍋安排。
+- 重新編為 12 頁，機制只占一頁，養種按開始、餵養、觀察、備酵頭銜接混合麵糰。首爐教學涵蓋兩次發酵與整形、蒸氣盤烘烤與冷卻，操作後才回頭排查與談健康。
+- 返回 Wiki 證據節點。W005 補入已有 SRC-002 的研究方法（Methods、圖 1），與 SRC-007 第 2 頁的等重餵養明確區隔。W004 依已有 SRC-004「Making Sourdough Bread / Bake」補上烤盤或烤模加蒸氣盤的替代分支。CSU 未提供 230 °C 旋風／氣炸設備的設定，實用前須查該模式的說明書，包括是否許可蒸氣盤及注入沸水，並確認層架夠用。未重做 Ingest。
+- 獨立內容審查後共修正一輪。P4 明列研究中丟棄取出的一大匙及省略採樣，P8 補兩等份與烘焙紙，來源表去重。完成後 51 個主張識別碼及 69 筆來源對應均通過。無新的 needs_human_review 主張，既有三項未納入。
+
+實際執行及結果
+- python3 scripts/lint_wiki.py --strict → PASS，0 errors、0 warnings。7/7 approved sources、8/8 approved articles、6/6 topics。建站腳本內同樣再次檢查通過。
+- python3 scripts/build_wiki_site.py → 從八篇核准文章重建 docs/index.html，W004、W005 新增證據可從簡報讀到。
+- python3 /tmp/sourdough-continuous/check.py → PASS。12 頁均有核准的 W ID 與 SRC ID。51 個主張與 69 筆 CSV 紀錄對應完整，所有本機連結及 Wiki 片段、SVG 資源、排除的安全文字檢查均通過。
+- node --check docs/slides/slides.js → 退出 0。
+- shasum -a 256 -c /tmp/sourdough-continuous/unchanged.sha256 → 來源登錄、Wiki 索引、其餘六篇 Wiki、Wiki CSS 和 JS、簡報 JS 均吻合。
+- node /tmp/sourdough-continuous/browser.mjs → Chrome/158.0.8127.36，退出 0。本機 HTTP /sourdough-science-wiki/slides/ 模擬 GitHub Pages 專案子路徑。320、390、768、1024、1440px 各 12 頁，60 組全部通過。1440px 主要內文 22px，手機 18px。沒有水平溢出、量測到的內容溢出、控制遮擋或插畫載入失敗。手機長頁自然向下捲動。
+- Chrome 操作實測 → 上一頁、下一頁、左右鍵、首尾邊界、章節、頁碼、進度及指定頁連結通過。點擊來源對話框、回查觀察頁、點擊 W004 與 SRC-004 抵達 Wiki 片段均通過。外部 CSU 連結位址另核對已閱讀的原文入口。
+- Chrome 擷取第 1、4、6、8、9、10、12 頁的 390px 與 1440px 畫面。人工檢視第 9 頁兩種寬度的兩張蒸氣盤圖，盤位清楚、文字正常換行、操作注意事項可見。瀏覽器驗證無需再修正。未用實際烤箱測試。
+
+額外工作區檢查
+- git status --short → 128，工作區沒有 .git。改用舊版備份作比對，並用雜湊確認以上檔案。本機檔案已完成，未上傳。

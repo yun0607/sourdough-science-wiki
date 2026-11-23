@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 390" width="480" height="390">
+  <defs>
+    <filter id="wash"><feTurbulence type="fractalNoise" baseFrequency=".046" numOctaves="3" seed="4" result="grain"/><feDisplacementMap in="SourceGraphic" in2="grain" scale="2.6" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <linearGradient id="oven" x2="0" y2="1"><stop stop-color="#dfc5a5"/><stop offset="1" stop-color="#bb8c65"/></linearGradient>
+  </defs>
+  <ellipse cx="239" cy="300" rx="193" ry="43" fill="#e5cead" opacity=".5"/>
+  <g filter="url(#wash)" stroke="#76513d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="73" y="49" width="334" height="254" rx="15" fill="url(#oven)"/>
+    <rect x="92" y="104" width="296" height="175" rx="8" fill="#faefd9"/>
+    <path d="M104 139h273m-273 57h273m-273 69h273" stroke="#a38b70" stroke-dasharray="7 6"/>
+    <path d="M113 195h257m-257 69h257" fill="none"/>
+    <path d="M152 171h184l-11 23H164z" fill="#a0a388"/>
+    <path d="M176 171q-5-24 27-40q36-20 73-5q20 9 28 45z" fill="#d7ad79"/>
+    <path d="M218 134q14 8 20 24m21-29q15 9 19 22" fill="none" stroke="#f8e3b9" stroke-width="5"/>
+    <path d="M174 243h143l-9 20H185z" fill="#d3b293"/>
+    <path d="M195 247h96" fill="none" stroke="#e6cc9f" stroke-width="2"/>
+    <path d="M125 77h77" stroke="#9c7a5e"/>
+    <circle cx="321" cy="78" r="9" fill="#fff0ce"/><circle cx="350" cy="78" r="9" fill="#fff0ce"/>
+  </g>
+</svg>

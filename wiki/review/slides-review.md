@@ -98,3 +98,20 @@
 目視擷取的 390px 第 8 頁及 1440px 第 2、12 頁，確認核心用途分別是觀察高度、比較研究用配方與按序辨認兩次發酵。390px 及 1440px 第 16 頁圖卡與測驗可讀。第 12 頁布覆容器的最後修正另以最新 SVG 及掛載位置核對。手機畫面較長的頁可捲動到翻頁控制，排版和按鈕的完整實測另見 `reports/slides-validation.txt`。
 
 2026-11-23（臺灣時間）補記實機驗收。Chrome 最終通過 320、390、768、1024、1440px 各 16 頁，桌面主要內文量得 22px、手機 18px。圖卡溢出修正一輪，最後版本的第 12 頁覆布容器亦經 390px 目視確認。最終瀏覽器執行退出 0，逐頁量測見 `reports/slides-validation.txt`。
+
+## 第六階段｜12 頁學習路線獨立內容審查
+
+2026-11-23（臺灣時間）。由未撰寫本版投影片的 AI 讀取 12 頁 HTML、逐項主張對應 CSV、兩篇 Wiki 補充草稿及烤箱 SVG，再核對下列原文。瀏覽器操作與版面結果由驗證報告記錄。
+
+| 頁次 | 結果與原文證據 |
+|---|---|
+| 1–2 | pass。W001 的酸種構成與微生物分工集中在兩頁。SRC-001 原文第 3 頁提到酵母產二氧化碳與細菌產有機酸，風味段落也討論有機酸。健康試驗已移出開場。[SRC-001 出版版](https://curis.ku.dk/ws/portalfiles/portal/279255725/A_review_of_sourdough_starters.pdf) |
+| 3–5 | pass。SRC-002 Methods 與圖 1 支持 2 平美式大匙粉、2 美式大匙蒸餾水、紙巾覆口與室溫 24 小時，以及約每 24 小時取出 1 大匙後各補 1 大匙粉和水。研究 14 天及前期膨脹後停滯見 Methods 與 Discussion，未解讀為家庭養成期限或單次漲高的成因。W005 註明略去實驗採樣與測量；伊利諾指南第 2 頁的 1:1:1 等重與多次活性觀察是另一個示例，20 克是比例示算。清潔器材和洗手可回到 W007 及 CSU 的操作衛生說明。[SRC-002 全文](https://pmc.ncbi.nlm.nih.gov/articles/PMC10559884/) · [SRC-007 第 2 頁](https://extension.illinois.edu/sites/default/files/2024-11/sourdough_101_final.pdf#page=2) · [SRC-005](https://extension.colostate.edu/resource/sourdough-starter-best-practices/) |
+| 6–8 | pass。W003、W004 與 W005 可追到反覆膨脹的活性線索、留罐母種與本次酵頭、兩個中型麵包的配方、酵頭與主麵糰用量、室溫第一次發酵、分份收底整形與烤模內最後發酵。CSU 的酵頭與兩段發酵均依這份配方看約兩倍體積。[SRC-004 Maintaining the Starter、Making Sourdough Bread](https://extension.colostate.edu/resource/sourdough-basics-caring-for-your-starter-and-making-bread/) · [SRC-007 第 2 頁](https://extension.illinois.edu/sites/default/files/2024-11/sourdough_101_final.pdf#page=2) |
+| 9–10 | pass。CSU 的 Bake 與烘焙器材段落核實 425 °F 約 218 °C、中層烤盤或烤模免預熱、最底層空的耐烤箱淺盤、劃口後入爐時才加 ½–1 美式杯沸水。烘烤約 35–45 分鐘、金黃至深褐並且中心達 190 °F 約 88 °C 是原配方熟度資訊，取出烤具使用隔熱手套並以網架冷卻。兩張 SVG 分別表示盤的位置與沸水倒入蒸氣盤。小型旋風／氣炸烤箱的適用性保留給設備說明書，CSU 無此模式換算值。[SRC-004 Bake、Supplies for Making Sourdough Bread](https://extension.colostate.edu/resource/sourdough-basics-caring-for-your-starter-and-making-bread/) |
+| 11 | pass。W002 及 W007 支持查室溫、用粉、粉水比例與餵養紀錄。已明顯長黴應丟掉全部酸種，洗淨沖洗容器再開始。生酸種避免試吃，氣泡、氣味、高度限用於追蹤活性。未納入三項待人工覆核的食品安全主張。[SRC-001 出版版](https://curis.ku.dk/ws/portalfiles/portal/279255725/A_review_of_sourdough_starters.pdf) · [SRC-005](https://extension.colostate.edu/resource/sourdough-starter-best-practices/) · [SRC-007 第 2–3 頁](https://extension.illinois.edu/sites/default/files/2024-11/sourdough_101_final.pdf#page=2) |
+| 12 | pass。W008 保留多項成人比較中餐後血糖結果不一、比較應看麵粉及製程等條件。含麩質粉製成的酸種麵包仍含麩質，現有綜述證據不足以把臨床健康效益歸給酸種發酵本身。[SRC-006 出版版](https://repository.uantwerpen.be/docman/irua/8bb026/196750.pdf) · [SRC-007 第 3 頁](https://extension.illinois.edu/sites/default/files/2024-11/sourdough_101_final.pdf#page=3) |
+
+教學順序與來源對應通過獨立檢查。12 頁的 51 個 HTML 主張識別碼與 CSV 的 69 筆資料完全對應。課程的主要操作路線依次為起始、續餵、觀察、備酵頭、拌揉、兩次發酵及其間的整形、烘烤冷卻；排查與健康限制安排在操作之後。原先兩篇 Wiki 缺乏從空罐開始的量匙用量及無鑄鐵鍋的烤盤流程，因此返回原文證據節點，以既有 SRC-002、SRC-004 補足。家庭固定養成日與使用者型號的換算設定仍無對應證據。
+
+審查後回到文案及來源對應節點修正 1 輪。第 4 頁與 W005 明寫研究會丟棄取出的一大匙，第 4 頁也標示略去採樣。第 8 頁說清楚分成兩等份及使用烘焙紙。CSV 的證據位置去除重複。重讀更新後的頁面與對應列通過，51 個主張識別碼與 69 筆資料仍完全對應。此次沒有需要繼續重試或送人工審查的新主張。
